@@ -56,3 +56,19 @@ jQuery(function($) {
 		social_tools: false
 	});	
 });
+
+function resizeImage() {
+    var image = document.getElementById('responsiveImage');
+	console.log("image",window.innerWidth);
+    if (window.innerWidth <= 768) { // Resolusi untuk mobile
+      image.style.width = '90px';
+    } else { // Resolusi untuk web
+      image.style.width = '120px';
+    }
+  }
+
+  // Panggil fungsi resizeImage saat halaman dimuat
+  window.onload = resizeImage;
+
+  // Panggil fungsi resizeImage setiap kali ukuran jendela berubah
+  window.onresize = resizeImage;
