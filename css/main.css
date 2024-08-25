@@ -1827,8 +1827,12 @@ ul.sidebar-gallery {
   margin-left: 15px;
 }
 
+.btn-custom {
+  background-color: #ffc107; /* Warna kuning */
+  color: white;
+  border: none;
+}
 
-
-
-
-
+.btn-custom:hover {
+  background-color: #e0a800; /* Warna kuning lebih gelap untuk efek hover */
+}
