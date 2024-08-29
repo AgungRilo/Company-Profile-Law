@@ -5,16 +5,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wuisan Law School</title>
-    <link rel="icon" href="/images/kelas/bg/logo_wls.png" type="image/x-icon">
-    <link rel="icon" href="/images/kelas/bg/logo_wls.png" type="image/x-icon">
+    <title>Peradi Nusantara</title>
+    <link rel="icon" href="images/kelas/bg/peradi.png" type="image/x-icon">
 
-     <!--SEO-->
-     <meta name="description" content="Wuisan Law School menawarkan kelas hukum profesional dan kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!">
-     <meta name="keywords" content="Wuisan Law School, sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum">
-     <meta name="author" content="Wuisan Law School">
-     <meta name="robots" content="index, follow">
-     <link rel="canonical" href="https://wuisanlawschool.net/">
+    <!--SEO-->
+    <meta name="description"
+        content="Peradi Nusantara menawarkan kelas hukum profesional dan kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!">
+    <meta name="keywords"
+        content="Peradi Nusantara, sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum">
+    <meta name="author" content="Peradi Nusantara">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wuisanlawschool.net/">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -26,13 +27,80 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+	<style>
+		.whatsapp-container, .whatsapp-container-2 {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
 
+.whatsapp-container {
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-container-2 {
+  bottom: 80px;
+  right: 20px;
+}
+
+.whatsapp-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.whatsapp-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.whatsapp-text {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.whatsapp-container:hover .whatsapp-text,
+.whatsapp-container-2:hover .whatsapp-text {
+  transform: translateX(0);
+  opacity: 1;
+}
+	</style>
 </head>
 
 <body class="homepage">
     <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
+                <div id="whatsapp-info" class="whatsapp-container">
+                    <div class="whatsapp-text">
+                        <p>Hubungi Pak Handi</p>
+                    </div>
+                    <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
+                <div id="whatsapp-info-2" class="whatsapp-container-2">
+                    <div class="whatsapp-text">
+                        <p>Hubungi Gabi</p>
+                    </div>
+                    <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -40,20 +108,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img id="responsiveImage" src="images/image-removebg-preview.png" class="img-responsive" alt=""
+                    <a class="navbar-brand" href="index.html" id="logo-top">
+                        <img id="responsiveImage" src="images/kelas/bg/peradi.png" class="img-responsive" alt=""
                             style="width: 90px;">
                     </a>
+                    <div id="titlename" class="title-name">
+                        Persaudaraan Advokatindo Nusantara
+                    </div>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about-us.html">Tentang</a></li>
-                        <li class="active"><a href="services.html">Layanan</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact-us.html">Kontak</a></li>
-                        <li><a target="_blank" href="https://wuisanlawschool.net/">Daftar</a></li>
+                    <ul class="nav navbar-nav" id="menu">
                     </ul>
                 </div>
             </div>
@@ -107,7 +172,7 @@
                             <img class="img-responsive" src="images/kelas/bg/icon_7.png" width="91" height="79">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">Sertifikasi</h3>
+                            <h3 style="font-size: 17px;" class="media-heading">Kuasa Hukum Perpajakan</h3>
                         </div>
                     </div>
                 </div>
@@ -162,7 +227,7 @@
                             <img class="img-responsive" src="images/kelas/bg/icon_5.png" width="91" height="79">
                         </div>
                         <div class="media-body">
-                            <h3 class="media-heading">Perburuhan</h3>
+                            <h3 class="media-heading">Sumpah</h3>
                         </div>
                     </div>
                 </div>
@@ -198,7 +263,10 @@
 
             <div class="clients-area center wow fadeInDown">
                 <h2>Total Peserta Pelatihan</h2>
-                <p class="lead">Total Peserta Pelatihan kami mencakup berbagai program dan kolaborasi, termasuk pelatihan PKPA yang sukses, kerjasama dengan universitas, dan berbagai kegiatan lainnya. Kami berkomitmen untuk menyediakan pelatihan berkualitas tinggi yang memperkaya pengetahuan dan keterampilan para peserta kami.</p>
+                <p class="lead">Total Peserta Pelatihan kami mencakup berbagai program dan kolaborasi, termasuk
+                    pelatihan PKPA yang sukses, kerjasama dengan universitas, dan berbagai kegiatan lainnya. Kami
+                    berkomitmen untuk menyediakan pelatihan berkualitas tinggi yang memperkaya pengetahuan dan
+                    keterampilan para peserta kami.</p>
             </div>
 
             <!-- <div class="row">
@@ -228,8 +296,8 @@
                 <div class="col-sm-4">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="joomla-skill">
-                            <p><em>185</em></p>
-                            <p>PKPA Terlaksana</p>
+                            <p><em>10</em></p>
+                            <p>PKPA & UPA Terlaksana</p>
                         </div>
                     </div>
                 </div>
@@ -246,7 +314,7 @@
                 <div class="col-sm-4">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
                         <div class="css-skill">
-                            <p><em>780</em></p>
+                            <p><em>870</em></p>
                             <p>Peserta</p>
                         </div>
                     </div>
@@ -255,8 +323,8 @@
                 <div class="col-sm-4">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
                         <div class="css-skill">
-                            <p><em>80 Orang</em></p>
-                            <p>CSS</p>
+                            <p><em>250</em></p>
+                            <p>Brevet A & B</p>
                         </div>
                     </div>
                 </div>
@@ -264,47 +332,20 @@
                 <div class="col-sm-4">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="joomla-skill">
-                            <p><em>185 Orang</em></p>
-                            <p>PPKA</p>
+                            <p><em>320</em></p>
+                            <p>Paralegal</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-4">
-                    <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-                        <div class="css-skill">
-                            <p><em>80 Orang</em></p>
-                            <p>CSS</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <div class="joomla-skill">
-                            <p><em>185 Orang</em></p>
-                            <p>PPKA</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <div class="joomla-skill">
-                            <p><em>185 Orang</em></p>
-                            <p>PPKA</p>
-                        </div>
-                    </div>
-                </div>                
 
                 <div class="col-sm-4">
                     <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
                         <div class="wp-skill">
-                            <p><em>90 Orang</em></p>
-                            <p>Wordpress</p>
+                            <p><em>310</em></p>
+                            <p>Sumpah</p>
                         </div>
                     </div>
-                </div>
+                </div>             
             </div>
 
 
@@ -403,21 +444,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2024 <a target="_blank" title="Wuisan Law School">Wuisan Law School</a>. All Rights Reserved.
+                    &copy; 2024 <a target="_blank" title="Peradi Nusantara">Peradi Nusantara</a>. All Rights Reserved.
                 </div>
                 <!-- 
                     All links in the footer should remain intact. 
                     Licenseing information is available at: http://bootstraptaste.com/license/
                     You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
-                -->
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
+                -->                
             </div>
         </div>
     </footer>
@@ -430,6 +463,21 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+		var whatsappLink = document.getElementById('whatsapp-contact');
+	var whatsappLink2 = document.getElementById('whatsapp-contact-2');
+
+	const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
+	const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+
+	const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+	const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+
+	// URL WhatsApp API dengan teks terenkode
+	whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
+	whatsappLink2.href=`https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
+
+	</script>
 </body>
 
 </html>

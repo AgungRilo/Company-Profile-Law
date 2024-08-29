@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wuisan Law School</title>
-    <link rel="icon" href="/images/kelas/bg/logo_wls.png" type="image/x-icon">
+    <title>Peradi Nusantara</title>
+    <link rel="icon" href="images/kelas/bg/peradi.png" type="image/x-icon">
 
     <!--SEO-->
-    <meta name="description" content="Wuisan Law School menawarkan kelas hukum profesional dan 
+    <meta name="description" content="Peradi Nusantara menawarkan kelas hukum profesional dan 
     kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. 
     Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!">
-    <meta name="keywords" content="Wuisan Law School, 
+    <meta name="keywords" content="Peradi Nusantara, 
     sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum">
-    <meta name="author" content="Wuisan Law School">
+    <meta name="author" content="Peradi Nusantara">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wuisanlawschool.net/">
     <!-- Bootstrap -->
@@ -28,13 +28,82 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <style>
+.whatsapp-container, .whatsapp-container-2 {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
 
+.whatsapp-container {
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-container-2 {
+  bottom: 80px;
+  right: 20px;
+}
+
+.whatsapp-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.whatsapp-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.whatsapp-text {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.whatsapp-container:hover .whatsapp-text,
+.whatsapp-container-2:hover .whatsapp-text {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+    </style>
 </head>
 
 <body class="homepage">
     <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
+                <div id="whatsapp-info" class="whatsapp-container">
+                    <div class="whatsapp-text">
+                        <p>Hubungi Pak Handi</p>
+                    </div>
+                    <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
+                <div id="whatsapp-info-2" class="whatsapp-container-2">
+                    <div class="whatsapp-text">
+                        <p>Hubungi Gabi</p>
+                    </div>
+                    <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+                    </a>
+                </div>
+
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -42,20 +111,24 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img id="responsiveImage" src="images/image-removebg-preview.png" class="img-responsive" alt=""
+                    <a class="navbar-brand" href="index.html" id="logo-top">
+                        <img id="responsiveImage" src="images/kelas/bg/peradi.png" class="img-responsive" alt=""
                             style="width: 90px;">
                     </a>
+                    <div id="titlename" class="title-name">
+                        Persaudaraan Advokatindo Nusantara
+                    </div>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Beranda</a></li>
+                    <ul class="nav navbar-nav" id="menu">
+                        <!-- <li class="active"><a href="index.html">Beranda</a></li>
                         <li><a href="about-us.html">Tentang</a></li>
                         <li><a href="services.html">Layanan</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact-us.html">Kontak</a></li>
                         <li><a target="_blank" href="https://wuisanlawschool.net/">Daftar</a></li>
+                        <li><a href="contact-us.html">Jasa Pembuatan Law Firm</a></li> -->
                     </ul>
                 </div>
             </div>
@@ -106,8 +179,10 @@
     <section id="feature">
         <div class="container">
             <div class="center wow fadeInDown">
-                <h2>Benefit bergabung dengan <span>Wuisan Law School</span></h2>
-                <p class="lead">Bergabung dengan Wuisan Law School memberikan Anda kesempatan untuk mendapatkan pelatihan hukum terbaik, fleksibilitas dalam pendidikan, kemudahan finansial, serta akses tak terbatas untuk memperluas karir Anda sebagai advokat sukses. </p>
+                <h2>Benefit bergabung dengan <span>Peradi Nusantara</span></h2>
+                <p class="lead">Bergabung dengan Peradi Nusantara memberikan Anda kesempatan untuk mendapatkan pelatihan
+                    hukum terbaik, fleksibilitas dalam pendidikan, kemudahan finansial, serta akses tak terbatas untuk
+                    memperluas karir Anda sebagai advokat sukses. </p>
             </div>
 
             <div class="row">
@@ -181,6 +256,43 @@
                 <p class="lead">"Galeri Kerja dan Testimoni Kami."</p>
             </div>
 
+
+            <div class="carousel-container">
+                <!-- Tombol navigasi kiri -->
+                <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+
+                <!-- Container untuk slide video -->
+                <div class="carousel-slide" id="carousel-slide">
+                    <!-- Item video 1 -->
+                    <div class="carousel-item">
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/mp2-w15SXms"
+                            title="W/X/Y - Tani Yuuki (Official Lyric Video)" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- Item video 2 -->
+                    <div class="carousel-item">
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Never Gonna Give You Up" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- Item video 3 -->
+                    <div class="carousel-item">
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/9bZkp7q19f0"
+                            title="Gangnam Style" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Tombol navigasi kanan -->
+                <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <!-- <iframe width="100%" height="500" src="https://youtube/mp2-w15SXms?si=ilQa4759dPzAzkJh" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe> -->
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
@@ -343,31 +455,7 @@
                     <div class="accordion">
                         <h2>FAQ Peradi Nusantara</h2>
                         <div class="panel-group" id="accordion1">
-                            <div class="panel panel-default">
-                                <!-- <div class="panel-heading active">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
-                                    Apakah tersedia opsi cicilan untuk biaya pendaftaran?
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-
-                            <div id="collapseOne1" class="panel-collapse collapse in">
-                              <div class="panel-body">
-                                  <div class="media accordion-inner">
-                                        <div class="pull-left">
-                                            <img class="img-responsive" src="images/accordion1.png">
-                                        </div>
-                                        <div class="media-body">
-                                             <h4>Adipisicing elit</h4>
-                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                                        </div>
-                                  </div>
-                              </div>
-                            </div>
-                          </div> -->
-
+                            <div class="panel panel-default">                              
                                 <div class="panel-heading active">
                                     <h3 class="panel-title">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1"
@@ -586,21 +674,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2024 <a target="_blank" title="Wuisan Law School">Wuisan Law School</a>. All Rights Reserved.
+                    &copy; 2024 <a target="_blank" title="Peradi Nusantara">Peradi Nusantara</a>. All Rights Reserved.
                 </div>
                 <!-- 
                     All links in the footer should remain intact. 
                     Licenseing information is available at: http://bootstraptaste.com/license/
                     You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
                 -->
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about-us.html">Tentang Kita</a></li>
-                        <!-- <li><a href="#">Faq</a></li> -->
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </footer>
@@ -613,6 +694,74 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+		var whatsappLink = document.getElementById('whatsapp-contact');
+	var whatsappLink2 = document.getElementById('whatsapp-contact-2');
+
+	const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
+	const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+
+	const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+	const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+
+	// URL WhatsApp API dengan teks terenkode
+	whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
+	whatsappLink2.href=`https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
+    var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+
+const jasa = "Saya ingin bertanya tentang jasa pembuatan Law Firm"
+const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
+const menuItems = [
+	{ href: "index.html", text: "Beranda" },
+	{ href: "about-us.html", text: "Tentang" },
+	{ href: "services.html", text: "Layanan" },
+	{ href: "portfolio.html", text: "Portfolio" },
+	{ href: "contact-us.html", text: "Kontak" },
+	{ href: "https://wuisanlawschool.net/", text: "Daftar", target: "_blank" },
+	{ href: textMenu , text: "Jasa Pembuatan Law Firm", target: "_blank" }
+];
+
+// Dapatkan URL halaman saat ini
+const currentUrl = window.location.pathname;
+
+// Dapatkan elemen ul dengan id "menu"
+const menu = document.getElementById('menu');
+
+// Looping melalui setiap item menu
+menuItems.forEach(item => {
+	// Buat elemen li baru
+	const newLi = document.createElement('li');
+	
+	// Buat elemen anchor baru
+	const newAnchor = document.createElement('a');
+	
+	// Set atribut href untuk anchor
+	newAnchor.href = item.href;
+
+	// Tambahkan teks ke dalam anchor
+	newAnchor.textContent = item.text;
+
+	// Cek jika ada target untuk anchor
+	if (item.target) {
+		newAnchor.target = item.target;
+	}
+
+	// Memeriksa apakah URL halaman saat ini cocok dengan href dari item menu
+		// if (currentUrl.includes(item.href) ) {
+		// 	newLi.classList.add('active'); // Menambahkan class 'active' ke elemen li
+		// }
+
+	if (currentUrl.includes(item.href) || (currentUrl === '/' && item.href === 'index.html')) {
+        newLi.classList.add('active'); // Menambahkan class 'active' ke elemen li		
+    }
+
+	// Masukkan anchor ke dalam li
+	newLi.appendChild(newAnchor);
+
+	// Tambahkan elemen li baru ke dalam ul
+	menu.appendChild(newLi);
+});
+	</script>
 </body>
 
 </html>
