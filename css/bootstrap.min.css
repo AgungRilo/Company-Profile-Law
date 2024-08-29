@@ -7956,3 +7956,145 @@ button.close {
         display: none !important
     }
 }
+
+  /* Gaya dasar untuk carousel container */
+  .carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+/* Gaya untuk video slide */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Gaya untuk setiap item video */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Gaya responsif untuk iframe */
+.carousel-item iframe {
+    width: 100%;
+    height: auto; /* Tinggi otomatis untuk menjaga aspek rasio */
+}
+
+.carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Gaya untuk video slide */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Gaya untuk setiap item video */
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk tombol navigasi */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-button.left {
+  left: 0;
+}
+
+.carousel-button.right {
+  right: 0;
+}
+
+/* Media query untuk ponsel (maksimum lebar 768px) */
+@media (max-width: 768px) {
+    .carousel-item iframe {
+        width: 100%;
+        height: 200px; /* Sesuaikan tinggi untuk ponsel */
+    }
+}
+
+/* Media query untuk tablet (maksimum lebar 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .carousel-item iframe {
+        width: 100%;
+        height: 300px; /* Sesuaikan tinggi untuk tablet */
+    }
+}
+
+/* Media query untuk desktop (lebar 993px ke atas) */
+@media (min-width: 993px) {
+    .carousel-item iframe {
+        width: 100%;
+        height: 480px; /* Tinggi standar untuk desktop */
+    }
+}
+
+.whatsapp-container, .whatsapp-container-2 {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.whatsapp-container {
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-container-2 {
+  bottom: 80px;
+  right: 20px;
+}
+
+.whatsapp-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.whatsapp-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.whatsapp-text {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.whatsapp-container:hover .whatsapp-text,
+.whatsapp-container-2:hover .whatsapp-text {
+  transform: translateX(0);
+  opacity: 1;
+}
