@@ -116,7 +116,6 @@ const menuItems = [
 	{ href: "index.html", text: "Beranda" },
 	{ href: "about-us.html", text: "Tentang" },
 	{ href: "services.html", text: "Layanan" },
-	{ href: "portfolio.html", text: "Portfolio" },
 	{ href: "contact-us.html", text: "Kontak" },
 	{ href: "https://wuisanlawschool.net/", text: "Daftar", target: "_blank" },
 	{ href: textMenu , text: "Jasa Pembuatan Law Firm", target: "_blank" }
