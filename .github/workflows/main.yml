@@ -1,0 +1,33 @@
+name: Deploy to Hosting Server
+
+# Trigger the action on push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up FTP Deploy Action
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftp.peradinusantara.net
+        username: u520882251.u520882251
+        password: Peradi1234@#$%!
+        local-dir: ./  # Directory to deploy
+        server-dir: /home/u520882251/domains/peradinusantara.net/public_html
+        protocol: ftp  # Use FTP, FTPS, or SFTP based on your server configuration
+        dry-run: false  # Set to true to test without actual deployment
+        dangerous-clean-slate: true  # Clears remote files before deploying
+
+    # Optional: Notification
+    - name: Post Deployment - Notification
+      run: echo "Deployment to the FTP server was successful!"
