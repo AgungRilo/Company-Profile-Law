@@ -1,379 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Peradi Nusantara</title>
-    <link rel="icon" href="images/kelas/bg/peradi.png" type="image/x-icon">
+    <link rel="icon" href="images/kelas/bg/peradi.png" type="image/x-icon" />
 
     <!--SEO-->
-    <meta name="description"
-        content="Peradi Nusantara menawarkan kelas hukum profesional dan kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!">
-    <meta name="keywords"
-        content="Peradi Nusantara, sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum">
-    <meta name="author" content="Peradi Nusantara">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wuisanlawschool.net/">
+    <meta
+      name="description"
+      content="Peradi Nusantara menawarkan kelas hukum profesional dan kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!" />
+    <meta
+      name="keywords"
+      content="Peradi Nusantara, sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum" />
+    <meta name="author" content="Peradi Nusantara" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wuisanlawschool.net/" />
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js" defer></script>
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
-	<style>
-		.whatsapp-container, .whatsapp-container-2 {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-}
+    <style>
+      .whatsapp-container,
+      .whatsapp-container-2 {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+      }
 
-.whatsapp-container {
-  bottom: 20px;
-  right: 20px;
-}
+      .whatsapp-container {
+        bottom: 20px;
+        right: 20px;
+      }
 
-.whatsapp-container-2 {
-  bottom: 80px;
-  right: 20px;
-}
+      .whatsapp-container-2 {
+        bottom: 80px;
+        right: 20px;
+      }
 
-.whatsapp-icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin-left: 10px;
-}
+      .whatsapp-icon {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
 
-.whatsapp-icon img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
+      .whatsapp-icon img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
 
+      .whatsapp-text {
+        background-color: #25d366;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
 
-.whatsapp-text {
-  background-color: #25D366;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  margin-right: 10px;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+      .whatsapp-container:hover .whatsapp-text,
+      .whatsapp-container-2:hover .whatsapp-text {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
 
-
-.whatsapp-container:hover .whatsapp-text,
-.whatsapp-container-2:hover .whatsapp-text {
-  transform: translateX(0);
-  opacity: 1;
-}
-	</style>
-</head>
-
-<body class="homepage">
+  <body class="homepage">
     <header id="header">
-        <nav class="navbar navbar-fixed-top" role="banner">
-            <div class="container">
-                <div id="whatsapp-info" class="whatsapp-container">
-                    <div class="whatsapp-text">
-                        <p>Hubungi Pak Handi</p>
-                    </div>
-                    <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
-                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-                    </a>
-                </div>
-                <div id="whatsapp-info-2" class="whatsapp-container-2">
-                    <div class="whatsapp-text">
-                        <p>Hubungi Gabi</p>
-                    </div>
-                    <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
-                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-                    </a>
-                </div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                   <a class="navbar-brand" href="index.html" id="logo-top">
-                        <img id="responsiveImage" src="images/kelas/bg/peradi.png" class="img-responsive" alt=""
-                            style="width: 90px;">
-                    </a>
-                    <div id="titlename" class="title-name">
-                        Persaudaraan Advokatindo Nusantara
-                    </div>
-                </div>
-
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav" id="menu">
-                    </ul>
-                </div>
+      <nav class="navbar navbar-fixed-top" role="banner">
+        <div class="container">
+          <div id="whatsapp-info" class="whatsapp-container">
+            <div class="whatsapp-text">
+              <p>Hubungi Pak Handi</p>
             </div>
-            <!--/.container-->
-        </nav>
-        <!--/nav-->
+            <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
+              <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+            </a>
+          </div>
+          <div id="whatsapp-info-2" class="whatsapp-container-2">
+            <div class="whatsapp-text">
+              <p>Hubungi Gabi</p>
+            </div>
+            <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
+              <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+            </a>
+          </div>
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" id="logo-top">
+              <img
+                id="responsiveImage"
+                src="images/kelas/bg/peradi.png"
+                class="img-responsive"
+                alt=""
+                style="width: 90px" />
+            </a>
+            <div id="titlename" class="title-name">
+              Persaudaraan Advokatindo Nusantara
+            </div>
+          </div>
 
+          <div class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav" id="menu"></ul>
+          </div>
+        </div>
+        <!--/.container-->
+      </nav>
+      <!--/nav-->
     </header>
     <!--/header-->
 
     <section id="portfolio">
-        <div class="container">
-            <div class="center">
-                <h2>Portfolio</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-
-            <ul class="portfolio-filter text-center">
-                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
-                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
-            </ul>
-            <!--/#portfolio-filter-->
-
-            <div >
-                <div class="portfolio-items">
-                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-
-                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
-                        <div class="recent-work-wrap">
-                            <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
-                            <div class="overlay">
-                                <div class="recent-work-inner">
-                                    <h3><a href="#">Business theme</a></h3>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                    </p>
-                                    <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i
-                                            class="fa fa-eye"></i> View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.portfolio-item-->
-                </div>
-            </div>
+      <div class="container">
+        <div class="center">
+          <h2>Portfolio</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut <br />
+            et dolore magna aliqua. Ut enim ad minim veniam
+          </p>
         </div>
+
+        <ul class="portfolio-filter text-center">
+          <li>
+            <a class="btn btn-default active" href="#" data-filter="*"
+              >All Works</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" data-filter=".bootstrap"
+              >Creative</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" data-filter=".html"
+              >Photography</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" data-filter=".wordpress"
+              >Web Development</a
+            >
+          </li>
+        </ul>
+        <!--/#portfolio-filter-->
+
+        <div>
+          <div class="portfolio-items">
+            <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item1.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item1.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item2.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item2.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item3.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item3.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item4.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item4.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item5.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item5.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item6.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item6.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item7.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item7.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+
+            <div
+              class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <img
+                  class="img-responsive"
+                  src="images/portfolio/recent/item8.png"
+                  alt="" />
+                <div class="overlay">
+                  <div class="recent-work-inner">
+                    <h3><a href="#">Business theme</a></h3>
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority
+                    </p>
+                    <a
+                      class="preview"
+                      href="images/portfolio/full/item8.png"
+                      rel="prettyPhoto"
+                      ><i class="fa fa-eye"></i> View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.portfolio-item-->
+          </div>
+        </div>
+      </div>
     </section>
     <!--/#portfolio-item-->
 
     <section id="bottom">
-        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">We are hiring</a></li>
-                            <li><a href="#">Meet the team</a></li>
-                            <li><a href="#">Copyright</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Support</h3>
-                        <ul>
-                            <li><a href="#">Faq</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">Documentation</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Developers</h3>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">SEO Marketing</a></li>
-                            <li><a href="#">Theme</a></li>
-                            <li><a href="#">Development</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.col-md-3-->
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h3>Our Partners</h3>
-                        <ul>
-                            <li><a href="#">Adipisicing Elit</a></li>
-                            <li><a href="#">Eiusmod</a></li>
-                            <li><a href="#">Tempor</a></li>
-                            <li><a href="#">Veniam</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--/.col-md-3-->
+      <div
+        class="container wow fadeInDown"
+        data-wow-duration="1000ms"
+        data-wow-delay="600ms">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="widget">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">We are hiring</a></li>
+                <li><a href="#">Meet the team</a></li>
+                <li><a href="#">Copyright</a></li>
+              </ul>
             </div>
+          </div>
+          <!--/.col-md-3-->
+
+          <div class="col-md-3 col-sm-6">
+            <div class="widget">
+              <h3>Support</h3>
+              <ul>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Documentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--/.col-md-3-->
+
+          <div class="col-md-3 col-sm-6">
+            <div class="widget">
+              <h3>Developers</h3>
+              <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">SEO Marketing</a></li>
+                <li><a href="#">Theme</a></li>
+                <li><a href="#">Development</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--/.col-md-3-->
+
+          <div class="col-md-3 col-sm-6">
+            <div class="widget">
+              <h3>Our Partners</h3>
+              <ul>
+                <li><a href="#">Adipisicing Elit</a></li>
+                <li><a href="#">Eiusmod</a></li>
+                <li><a href="#">Tempor</a></li>
+                <li><a href="#">Veniam</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--/.col-md-3-->
         </div>
+      </div>
     </section>
     <!--/#bottom-->
 
     <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="social">
-                        <ul class="social-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="social">
+              <ul class="social-share">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-skype"></i></a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-        <!--/.container-->
+      </div>
+      <!--/.container-->
     </div>
     <!--/.top-bar-->
 
     <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2024 <a target="_blank" title="Peradi Nusantara">Peradi Nusantara</a>. All Rights Reserved.
-                </div>
-                <!-- 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            &copy; 2024
+            <a target="_blank" title="Peradi Nusantara">Peradi Nusantara</a>.
+            All Rights Reserved.
+          </div>
+          <!-- 
                     All links in the footer should remain intact. 
                     Licenseing information is available at: http://bootstraptaste.com/license/
                     You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Gp
-                -->                
-            </div>
+                -->
         </div>
+      </div>
     </footer>
     <!--/#footer-->
 
@@ -385,20 +506,22 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-		var whatsappLink = document.getElementById('whatsapp-contact');
-	var whatsappLink2 = document.getElementById('whatsapp-contact-2');
+      var whatsappLink = document.getElementById("whatsapp-contact");
+      var whatsappLink2 = document.getElementById("whatsapp-contact-2");
 
-	const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
-	const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+      const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
+      const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
 
-	const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-	const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+      const uriEncodedTextHandi = encodeURIComponent(
+        "Hallo Saya ingin bertanya perihal peradi nusantara"
+      );
+      const uriEncodedTextGabi = encodeURIComponent(
+        "Hallo Saya ingin bertanya perihal peradi nusantara"
+      );
 
-	// URL WhatsApp API dengan teks terenkode
-	whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
-	whatsappLink2.href=`https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
-
-	</script>
-</body>
-
+      // URL WhatsApp API dengan teks terenkode
+      whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
+      whatsappLink2.href = `https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
+    </script>
+  </body>
 </html>
