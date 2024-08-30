@@ -1748,6 +1748,12 @@ pre code {
     margin-left: auto;
     margin-top:-41px;
   }
+  @media (min-width: 683px) {
+    .container-carousel-beranda{
+      width: 650px;
+      margin-top:-65px;
+    }
+  }
   @media (min-width: 768px) {
     .container-carousel-beranda{
       width: 450px;
@@ -1760,7 +1766,7 @@ pre code {
   }
   @media (min-width: 1200px) {
     .container-carousel-beranda{
-      width: 1300px;    
+      width: 1300px;  
     }
   }
 #titlename{

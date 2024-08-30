@@ -1394,18 +1394,19 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-.container-carousel-beranda{
+/* .container-carousel-beranda{
   padding-right: 10px;
   padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
+  margin-top:-41px;
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
   .container-carousel-beranda{
-    width: 450px;
+    width: 100px;
   }
 }
 @media (min-width: 992px) {
@@ -1423,7 +1424,7 @@ pre code {
   .container-carousel-beranda{
     width: 870px;    
   }
-}
+} */
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
