@@ -35,21 +35,16 @@
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
                 <div id="whatsapp-info" class="whatsapp-container">
-                    <div class="whatsapp-text">
-                        <p>Hubungi Pak Handi</p>
+                    <div class="whatsapp-text" style="display: flex; flex-direction: column;">
+                        <a id="pak-handi" class="whatsapp-list" target="_blank">Pak Handi +62 877-8200-0561 </a>
+                        <a id="gabi" class="whatsapp-list" target="_blank"> Gabi +62 897-9941-802</a>
+                        <a id="pak-ronald" class="whatsapp-list" target="_blank"> Pak Ronald +62 813-1784-3152</a>
+                        <a id="bu-irene" class="whatsapp-list" target="_blank"> Bu Irene +62 821-1068-6368</a>
                     </div>
-                    <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
+                    <div class="whatsapp-icon">
                         <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-                    </a>
-                </div>
-                <div id="whatsapp-info-2" class="whatsapp-container-2">
-                    <div class="whatsapp-text">
-                        <p>Hubungi Gabi</p>
                     </div>
-                    <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
-                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-                    </a>
-                </div>
+                </div>                
 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -605,75 +600,7 @@
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<script src="js/jquery.isotope.min.js"></script>
 	<script src="js/wow.min.js"></script>
-	<script src="js/main.js"></script>
-    <script>
-        // var whatsappLink = document.getElementById('whatsapp-contact');
-        // var whatsappLink2 = document.getElementById('whatsapp-contact-2');
-
-        // const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
-        // const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-
-        // const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-        // const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-
-        // // URL WhatsApp API dengan teks terenkode
-        // whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
-        // whatsappLink2.href = `https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
-        // var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
-
-        // const jasa = "Saya ingin bertanya tentang jasa pembuatan Law Firm"
-        // const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
-        // const menuItems = [
-        //     { href: "index.html", text: "Beranda" },
-        //     { href: "about-us.html", text: "Tentang" },
-        //     { href: "services.html", text: "Layanan" },
-        //     { href: "portfolio.html", text: "Portfolio" },
-        //     { href: "contact-us.html", text: "Kontak" },
-        //     { href: "https://wuisanlawschool.net/", text: "Daftar", target: "_blank" },
-        //     { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
-        // ];
-
-        // // Dapatkan URL halaman saat ini
-        // const currentUrl = window.location.pathname;
-
-        // // Dapatkan elemen ul dengan id "menu"
-        // const menu = document.getElementById('menu');
-
-        // // Looping melalui setiap item menu
-        // menuItems.forEach(item => {
-        //     // Buat elemen li baru
-        //     const newLi = document.createElement('li');
-
-        //     // Buat elemen anchor baru
-        //     const newAnchor = document.createElement('a');
-
-        //     // Set atribut href untuk anchor
-        //     newAnchor.href = item.href;
-
-        //     // Tambahkan teks ke dalam anchor
-        //     newAnchor.textContent = item.text;
-
-        //     // Cek jika ada target untuk anchor
-        //     if (item.target) {
-        //         newAnchor.target = item.target;
-        //     }
-
-        //     // Memeriksa apakah URL halaman saat ini cocok dengan href dari item menu
-        //     // if (currentUrl.includes(item.href) ) {
-        //     // 	newLi.classList.add('active'); // Menambahkan class 'active' ke elemen li
-        //     // }
-
-        //     if (currentUrl.includes(item.href) || (currentUrl === '/' && item.href === 'index.html')) {
-        //         newLi.classList.add('active'); // Menambahkan class 'active' ke elemen li		
-        //     }
-
-        //     // Masukkan anchor ke dalam li
-        //     newLi.appendChild(newAnchor);
-
-        //     // Tambahkan elemen li baru ke dalam ul
-        //     menu.appendChild(newLi);
-        // });
-    </script>
+	<script src="js/main.js"></script>    
 </body>
 
 </html>

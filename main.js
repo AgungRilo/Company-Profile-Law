@@ -28,54 +28,8 @@ jQuery(function ($) {
 			$portfolio.isotope({ filter: selector });
 			return false;
 		});
-	});
-	function jsonToText(json) {
-		return `Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
-			`Nama: ${json.name}\n` +
-			`Email: ${json.email}\n` +			
-			`Universitas: ${json.university}\n`+
-			`Subjek: ${json.subject}\n` +
-			`Pesan: ${json.message}\n` ;
-	}
-	// Contact form
-	var form = $('#main-contact-form');	
-	var phoneNumber = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
-
-	form.submit(function (event) {
-		let data = {
-			name: document.getElementById("name").value,
-			email: document.getElementById("email").value,
-			university: document.getElementById("university").value,
-			subject:document.getElementById("subject").value,
-			message:document.getElementById("message").value			
-		}		
-		event.preventDefault();
-
-		const formattedText = jsonToText(data);
-		const uriEncodedText = encodeURIComponent(formattedText);		
-
-		// Nomor telepon tujuan di WhatsApp
-
-		// URL WhatsApp API dengan teks terenkode
-		var whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${uriEncodedText}`;
-
-		// Redirect ke URL WhatsApp
-		window.open(whatsappUrl, '_blank');
-	}	
-	);
-
-	var whatsappLink = document.getElementById('whatsapp-contact');
-	var whatsappLink2 = document.getElementById('whatsapp-contact-2');
-
-	const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
-	const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-
-	const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-	const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-
-	// URL WhatsApp API dengan teks terenkode
-	whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
-	whatsappLink2.href=`https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
+	});		
+	
 
 
 	//Pretty Photo
