@@ -1394,19 +1394,34 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+.container-carousel-beranda{
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .container-carousel-beranda{
+    width: 450px;
   }
 }
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  .container-carousel-beranda{
+    width: 670px;    
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+  .container-carousel-beranda{
+    width: 870px;    
   }
 }
 .container-fluid {
