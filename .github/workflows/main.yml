@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: "ftp.peradinusantara.net"
-        username: "u520882251.u520882251"
-        password: "Peradi1234@#$%!"
+        server: "ftp.peradinusantara.org"
+        username: "peradinusantara@peradinusantara.org"
+        password: "qlJ5]g9VJOG7"
