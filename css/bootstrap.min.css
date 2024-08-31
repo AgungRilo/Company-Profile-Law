@@ -1748,6 +1748,7 @@ pre code {
     margin-left: auto;
     margin-top:-41px;
   }
+ 
   @media (min-width: 683px) {
     .container-carousel-beranda{
       width: 640px;
@@ -1793,7 +1794,7 @@ pre code {
 
 @media (min-width:414px) {
     .container {
-        width: 450px
+        width: 430px
     }
     #titlename {
         font-size: 14px; /* Ukuran font terbesar untuk layar sangat besar */
