@@ -8115,7 +8115,7 @@ button.close {
         height: 480px; /* Tinggi standar untuk desktop */
     }
 }
-
+/* 
 .whatsapp-container, .whatsapp-container-2 {
   position: fixed;
   display: flex;
@@ -8165,4 +8165,4 @@ button.close {
 .whatsapp-container-2:hover .whatsapp-text {
   transform: translateX(0);
   opacity: 1;
-}
+} */

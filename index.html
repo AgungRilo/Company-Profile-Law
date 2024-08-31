@@ -19,12 +19,12 @@
     <link rel="canonical" href="https://wuisanlawschool.net/">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link href="css/animate.min.css" rel="stylesheet">
-	<link href="css/prettyPhoto.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-    
-	<link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <link href="css/responsive.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
     <script src="js/script.js" defer></script>
@@ -34,7 +34,7 @@
     <header id="header">
         <nav class="navbar navbar-fixed-top" role="banner">
             <div class="container">
-                <div id="whatsapp-info" class="whatsapp-container">
+                <!-- <div id="whatsapp-info" class="whatsapp-container">
                     <div class="whatsapp-text" style="display: flex; flex-direction: column;">
                         <a id="pak-handi" class="whatsapp-list" target="_blank">Pak Handi +62 877-8200-0561 </a>
                         <a id="gabi" class="whatsapp-list" target="_blank"> Gabi +62 897-9941-802</a>
@@ -44,7 +44,21 @@
                     <div class="whatsapp-icon">
                         <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
                     </div>
-                </div>                
+                </div> -->
+
+                <div class="whatsapp-container">
+                    <div class="whatsapp-button" onclick="toggleWhatsappList()">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon">
+                    </div>
+                    <div class="whatsapp-list" id="whatsappList">
+                        <ul>
+                            <li><a href="#" onclick="sendMessage('6287782000561')"><i class="fa fa-whatsapp"></i>Pak Handi +62 877-8200-0561</a></li>
+                            <li><a href="#" onclick="sendMessage('628979941802')"><i class="fa fa-whatsapp"></i>Gabi +62 897 9941 802</a></li>
+                            <li><a href="#" onclick="sendMessage('6281317843152')"><i class="fa fa-whatsapp"></i>Pak Ronald +62 813 1784 3152</a></li>
+                            <li><a href="#" onclick="sendMessage('6282110686368')"><i class="fa fa-whatsapp"></i>Bu Irene +62 821-1068-6368</a></li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -64,7 +78,7 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav" id="menu">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -76,7 +90,7 @@
     <!--/header-->
 
     <div class="slider">
-        <div class="container-carousel-beranda" >
+        <div class="container-carousel-beranda">
             <div id="about-slider">
                 <div id="carousel-slider" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -200,22 +214,21 @@
                 <div class="carousel-slide" id="carousel-slide">
                     <!-- Item video 1 -->
                     <div class="carousel-item">
-                        <iframe width="853" height="480" src="https://www.youtube.com/embed/QudY8DhyxIw?si=4rcP1a2CJRb_VF1s"
+                        <iframe width="853" height="480"
+                            src="https://www.youtube.com/embed/QudY8DhyxIw?si=4rcP1a2CJRb_VF1s"
                             title="Mengapa Harus PERADI NUSANTARA?" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <!-- Item video 2 -->
                     <div class="carousel-item">
-                        <iframe width="853" height="480" src=""
-                            title="" frameborder="0"
+                        <iframe width="853" height="480" src="" title="" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <!-- Item video 3 -->
                     <div class="carousel-item">
-                        <iframe width="853" height="480" src=""
-                            title="" frameborder="0"
+                        <iframe width="853" height="480" src="" title="" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
@@ -331,14 +344,13 @@
         <!--/.container-->
     </section>
     <!--/#recent-works-->
-    <div
-    class="d-flex justify-content-center align-items-center vh-100 center wow fadeInDown"
-    data-wow-duration="1000ms"
-    data-wow-delay="1200ms">
-    <a href="https://wuisanlawschool.net/" target="_blank">
-      <button style="height: 60px; color: black; width: 40%; font-size: x-large;" class="btn btn-custom">Daftar Kelas Sekarang !!</button>
-    </a>
-  </div>
+    <div class="d-flex justify-content-center align-items-center vh-100 center wow fadeInDown"
+        data-wow-duration="1000ms" data-wow-delay="1200ms">
+        <a href="https://wuisanlawschool.net/" target="_blank">
+            <button style="height: 60px; color: black; width: 40%; font-size: x-large;" class="btn btn-custom">Daftar
+                Kelas Sekarang !!</button>
+        </a>
+    </div>
     <section id="middle">
         <div class="container">
             <div class="row">
@@ -359,12 +371,12 @@
                         </div>
 
                         <div class="progress-wrap">
-                            <h3>Mahasiswa/S1 (Semua Jurusan) </h3>                            
+                            <h3>Mahasiswa/S1 (Semua Jurusan) </h3>
                         </div>
 
                         <div class="progress-wrap">
-                            <h3>Mengisi Formulir Pendaftaran</h3>                            
-                        </div>                       
+                            <h3>Mengisi Formulir Pendaftaran</h3>
+                        </div>
                     </div>
 
                 </div>
@@ -563,7 +575,11 @@
                 <div class="col-lg-12">
                     <div class="social">
                         <ul class="social-share">
-                            <li><a href="https://www.instagram.com/peradinusantara.id/" target="_blank"><i class="fa fa-instagram"></i></a></li>                            
+                            <li>
+                                <a href="https://www.instagram.com/peradinusantara.id/" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -592,11 +608,11 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.prettyPhoto.js"></script>
-	<script src="js/jquery.isotope.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/main.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -38,18 +38,19 @@
       <nav class="navbar navbar-fixed-top" role="banner">
         <div class="container">
           
-          <div id="whatsapp-info" class="whatsapp-container">
-            <div class="whatsapp-text" >
-                <a id="pak-handi" class="whatsapp-list" target="_blank">Pak Handi +62 877-8200-0561 </a>
-                <a id="gabi" class="whatsapp-list" target="_blank"> Gabi +62 897-9941-802</a>
-                <a id="pak-ronald" class="whatsapp-list" target="_blank"> Pak Ronald +62 813-1784-3152</a>
-                <a id="bu-irene" class="whatsapp-list" target="_blank"> Bu Irene +62 821-1068-6368</a>
-
+          <div class="whatsapp-container">
+            <div class="whatsapp-button" onclick="toggleWhatsappList()">
+                <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon">
             </div>
-            <div class="whatsapp-icon">
-                <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+            <div class="whatsapp-list" id="whatsappList">
+                <ul>
+                    <li><a href="#" onclick="sendMessage('6287782000561')"><i class="fa fa-whatsapp"></i>Pak Handi +62 877-8200-0561</a></li>
+                    <li><a href="#" onclick="sendMessage('628979941802')"><i class="fa fa-whatsapp"></i>Gabi +62 897 9941 802</a></li>
+                    <li><a href="#" onclick="sendMessage('6281317843152')"><i class="fa fa-whatsapp"></i>Pak Ronald +62 813 1784 3152</a></li>
+                    <li><a href="#" onclick="sendMessage('6282110686368')"><i class="fa fa-whatsapp"></i>Bu Irene +62 821-1068-6368</a></li>
+                </ul>
             </div>
-          </div>
+        </div>
           <div class="navbar-header">
             <button
               type="button"

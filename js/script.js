@@ -78,17 +78,17 @@ menuItems.forEach(item => {
 });
 
 // Get the elements
-var whatsappContainer = document.querySelector('.whatsapp-container');
-var whatsappText = document.querySelector('.whatsapp-text');
+// var whatsappContainer = document.querySelector('.whatsapp-container');
+// var whatsappText = document.querySelector('.whatsapp-text');
 
-// Add click event listener to toggle visibility
-whatsappContainer.addEventListener('click', function () {
-    if (whatsappText.style.display === 'block') {
-        whatsappText.style.display = 'none';
-    } else {
-        whatsappText.style.display = 'block';
-    }
-});
+// // Add click event listener to toggle visibility
+// whatsappContainer.addEventListener('click', function () {
+//     if (whatsappText.style.display === 'block') {
+//         whatsappText.style.display = 'none';
+//     } else {
+//         whatsappText.style.display = 'block';
+//     }
+// });
 
 function jsonToText(json) {
     return `Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
@@ -126,28 +126,98 @@ form.submit(function (event) {
 }	
 );
 
-var whatsappLink = document.getElementById('pak-handi');
-var whatsappLink2 = document.getElementById('gabi');
-var whatsappLink3 = document.getElementById('pak-ronald');
-var whatsappLink4 = document.getElementById('bu-irene');
+// var whatsappLink = document.getElementById('pak-handi');
+// var whatsappLink2 = document.getElementById('gabi');
+// var whatsappLink3 = document.getElementById('pak-ronald');
+// var whatsappLink4 = document.getElementById('bu-irene');
 
-const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
-const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-const phoneNumberRonald = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-const phoneNumberIrene = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+// const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
+// const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+// const phoneNumberRonald = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+// const phoneNumberIrene = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
 
-const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-const uriEncodedTextRonald = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-const uriEncodedTextIrene = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+// const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+// const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+// const uriEncodedTextRonald = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+// const uriEncodedTextIrene = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
 
-// URL WhatsApp API dengan teks terenkode
-whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
-whatsappLink2.href = `https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
-whatsappLink3.href = `https://api.whatsapp.com/send?phone=${phoneNumberRonald}&text=${uriEncodedTextRonald}`;
-whatsappLink4.href = `https://api.whatsapp.com/send?phone=${phoneNumberIrene}&text=${uriEncodedTextIrene}`;
+// // URL WhatsApp API dengan teks terenkode
+// whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
+// whatsappLink2.href = `https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
+// whatsappLink3.href = `https://api.whatsapp.com/send?phone=${phoneNumberRonald}&text=${uriEncodedTextRonald}`;
+// whatsappLink4.href = `https://api.whatsapp.com/send?phone=${phoneNumberIrene}&text=${uriEncodedTextIrene}`;
+// whatsappIcon.addEventListener('click', function (event) {
+//     event.preventDefault(); // Prevent any default action on click
+//     event.stopPropagation(); // Stop the click from propagating
 
+//     // Toggle visibility on click
+//     if (whatsappText.style.transform === "translateX(0px)") {
+//         whatsappText.style.transform = "translateX(100%)";
+//         whatsappText.style.opacity = "0";
+//     } else {
+//         whatsappText.style.transform = "translateX(0px)";
+//         whatsappText.style.opacity = "1";
+//     }
+// });
+// document.addEventListener("DOMContentLoaded", function () {
+//     var whatsappLinks = {
+//         'pak-handi': '6287782000561',
+//         'gabi': '628979941802',
+//         'pak-ronald': '6281317843152',
+//         'bu-irene': '6282110686368'
+//     };
 
+//     var uriEncodedText = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+
+//     // Set href for each WhatsApp link
+//     for (var id in whatsappLinks) {
+//         var linkElement = document.getElementById(id);
+//         linkElement.href = `https://api.whatsapp.com/send?phone=${whatsappLinks[id]}&text=${uriEncodedText}`;
+
+//         // Add click event listener to each link to prevent direct navigation from parent click
+//         linkElement.addEventListener('click', function (event) {
+//             event.stopPropagation(); // Prevent the click from affecting parent elements
+//         });
+//     }
+
+//     // Handle click to toggle visibility of WhatsApp list
+//     var whatsappIcon = document.querySelector('.whatsapp-icon');
+//     var whatsappText = document.querySelector('.whatsapp-text');
+
+//     whatsappIcon.addEventListener('click', function (event) {
+//         event.preventDefault(); // Prevent any default action on click
+//         event.stopPropagation(); // Stop the click from propagating
+
+//         // Toggle visibility on click
+//         if (whatsappText.style.transform === "translateX(0px)") {
+//             whatsappText.style.transform = "translateX(100%)";
+//             whatsappText.style.opacity = "0";
+//         } else {
+//             whatsappText.style.transform = "translateX(0px)";
+//             whatsappText.style.opacity = "1";
+//         }
+//     });
+
+//     // Optional: Hide whatsapp-text when clicking outside
+//     document.addEventListener('click', function (event) {
+//         // Prevent toggling if the click is inside the whatsapp text area
+//         if (!whatsappText.contains(event.target) && whatsappText.style.transform === "translateX(0px)") {
+//             whatsappText.style.transform = "translateX(100%)";
+//             whatsappText.style.opacity = "0";
+//         }
+//     });
+// });
+
+function toggleWhatsappList() {
+    const whatsappList = document.getElementById('whatsappList');
+    whatsappList.style.display = whatsappList.style.display === 'none' || whatsappList.style.display === '' ? 'block' : 'none';
+}
+
+function sendMessage(number) {
+    const message = encodeURIComponent('Hallo Saya ingin bertanya perihal peradi nusantara');
+    const whatsappLink = `https://wa.me/${number}?text=${message}`;
+    window.open(whatsappLink, '_blank');
+}
 // Menginisialisasi index slide
 let currentSlide = 0;
 
