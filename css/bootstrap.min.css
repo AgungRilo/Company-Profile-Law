@@ -1750,7 +1750,7 @@ pre code {
   }
   @media (min-width: 683px) {
     .container-carousel-beranda{
-      width: 650px;
+      width: 640px;
       margin-top:-65px;
     }
   }
@@ -1766,7 +1766,9 @@ pre code {
   }
   @media (min-width: 1200px) {
     .container-carousel-beranda{
-      width: 1300px;  
+      width: 1300px;
+      margin-top:-45px;
+
     }
   }
 #titlename{
