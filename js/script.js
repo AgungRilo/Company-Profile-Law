@@ -31,7 +31,7 @@ const menuItems = [
     { href: "about-us.html", text: "Tentang" },
     { href: "services.html", text: "Layanan" },
     { href: "contact-us.html", text: "Kontak" },
-    { href: "https://wuisanlawschool.net/", text: "Daftar", target: "_blank" },
+    { href: "https://app.peradinusantara.org/", text: "Daftar", target: "_blank" },
     { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
     // { href: "portfolio.html", text: "Portfolio" },
 ];
