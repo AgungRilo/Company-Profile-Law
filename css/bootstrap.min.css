@@ -1749,10 +1749,14 @@ pre code {
     margin-top:-41px;
   }
  
-  @media (min-width: 683px) {
+  @media (min-width: 683px) and (max-width:683px) {
     .container-carousel-beranda{
       width: 640px;
       margin-top:-65px;
+    }
+    .display-price{
+        display: flex;
+        gap:2px
     }
   }
   @media (min-width: 768px) {
@@ -1912,7 +1916,7 @@ pre code {
     }
     .responsiveImages{
         width: 400px;
-    }    
+    }     
 }
 @media (min-width:1517.78px) {
     .container {
