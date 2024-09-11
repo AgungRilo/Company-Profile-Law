@@ -5,55 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Peradi Nusantara</title>
-    <link rel="icon" href="images/kelas/bg/LogoPeradi.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="images/kelas/bg/LogoPeradi.png"
+      type="image/x-icon" />
 
     <!--SEO-->
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Peradi Nusantara" />
+    <meta
+      property="og:description"
+      content="Peradi Nusantara menawarkan kelas hukum profesional." />
+    <meta
+      property="og:image"
+      content="https://www.peradinusantara.org/images/kelas/bg/peradi.png" />
+    <meta property="og:url" content="https://www.peradinusantara.org/" />
+    <meta property="og:type" content="website" />
+    <meta content="https://peradinusantara.org/" property="og:url" />
+    <meta content="Home" property="og:title" />
+    <meta name="twitter:title" content="Home" />
+    <meta content="website" property="og:type" />
+    <meta property="og:image" />
+    <meta name="twitter:image" />
+    <meta content="" property="og:image:alt" />
+    <meta content="" name="twitter:image:alt" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <meta
       name="description"
-      content="Peradi Nusantara menawarkan kelas hukum profesional dan kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!" />
+      content="Peradi Nusantara menawarkan kelas hukum profesional dan 
+    kursus pelatihan hukum untuk membantu Anda menjadi ahli hukum. 
+    Bergabunglah dengan kami sekarang untuk pengalaman belajar terbaik!" />
     <meta
       name="keywords"
-      content="Peradi Nusantara, sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum" />
+      content="Peradi Nusantara, 
+    sekolah hukum, kursus hukum, belajar hukum, pelatihan hukum, kelas hukum, pendidikan hukum" />
     <meta name="author" content="Peradi Nusantara" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://wuisanlawschool.net/" />
-
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link href="css/animate.min.css" rel="stylesheet" />
     <link href="css/prettyPhoto.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+
     <link href="css/responsive.css" rel="stylesheet" />
 
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/script.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->    
   </head>
 
   <body class="homepage">
     <header id="header">
       <nav class="navbar navbar-fixed-top" role="banner">
         <div class="container">
-          <div id="whatsapp-info" class="whatsapp-container">
-            <div class="whatsapp-text">
-              <p>Hubungi Pak Handi</p>
+          <!-- <div id="whatsapp-info" class="whatsapp-container">
+                    <div class="whatsapp-text" style="display: flex; flex-direction: column;">
+                        <a id="pak-handi" class="whatsapp-list" target="_blank">Pak Handi +62 877-8200-0561 </a>
+                        <a id="gabi" class="whatsapp-list" target="_blank"> Gabi +62 897-9941-802</a>
+                        <a id="pak-ronald" class="whatsapp-list" target="_blank"> Pak Ronald +62 813-1784-3152</a>
+                        <a id="bu-irene" class="whatsapp-list" target="_blank"> Bu Irene +62 821-1068-6368</a>
+                    </div>
+                    <div class="whatsapp-icon">
+                        <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
+                    </div>
+                </div> -->
+
+          <div class="whatsapp-container">
+            <div class="whatsapp-button" onclick="toggleWhatsappList()">
+              <img
+                src="/images/kelas/bg/whatsapp.png"
+                alt="WhatsApp Icon"
+                class="whatsapp-icon" />
             </div>
-            <a id="whatsapp-contact" target="_blank" class="whatsapp-icon">
-              <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-            </a>
-          </div>
-          <div id="whatsapp-info-2" class="whatsapp-container-2">
-            <div class="whatsapp-text">
-              <p>Hubungi Gabi</p>
+            <div class="whatsapp-list" id="whatsappList">
+              <ul>
+                <li>
+                  <a href="#" onclick="sendMessage('6287782000561')"
+                    ><i class="fa fa-whatsapp"></i>Handi +62 877-8200-0561</a
+                  >
+                </li>
+                <li>
+                  <a href="#" onclick="sendMessage('628979941802')"
+                    ><i class="fa fa-whatsapp"></i>Gabi +62 897 9941 802</a
+                  >
+                </li>
+                <li>
+                  <a href="#" onclick="sendMessage('6281317843152')"
+                    ><i class="fa fa-whatsapp"></i>Ronald +62 813 1784 3152</a
+                  >
+                </li>
+                <li>
+                  <a href="#" onclick="sendMessage('6282110686368')"
+                    ><i class="fa fa-whatsapp"></i>Irene +62 821-1068-6368</a
+                  >
+                </li>
+              </ul>
             </div>
-            <a id="whatsapp-contact-2" target="_blank" class="whatsapp-icon">
-              <img src="/images/kelas/bg/whatsapp.png" alt="WhatsApp" />
-            </a>
           </div>
+
           <div class="navbar-header">
             <button
               type="button"
@@ -91,33 +143,26 @@
     <section id="portfolio">
       <div class="container">
         <div class="center">
-          <h2>Portfolio</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut <br />
-            et dolore magna aliqua. Ut enim ad minim veniam
-          </p>
+          <h2>Berita</h2>
         </div>
 
         <ul class="portfolio-filter text-center">
           <li>
-            <a class="btn btn-default active" href="#" data-filter="*"
-              >All Works</a
+            <a class="btn btn-default active" href="#" data-filter=".website"
+              >Website</a
             >
           </li>
           <li>
-            <a class="btn btn-default" href="#" data-filter=".bootstrap"
-              >Creative</a
+            <a class="btn btn-default" href="#" data-filter=".instagram"
+              >Instagram</a
             >
           </li>
           <li>
-            <a class="btn btn-default" href="#" data-filter=".html"
-              >Photography</a
-            >
+            <a class="btn btn-default" href="#" data-filter=".tiktok">Tiktok</a>
           </li>
           <li>
             <a class="btn btn-default" href="#" data-filter=".wordpress"
-              >Web Development</a
+              >Facebook</a
             >
           </li>
         </ul>
@@ -125,211 +170,72 @@
 
         <div>
           <div class="portfolio-items">
-            <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+            <div
+              class="portfolio-item bootstrap website col-xs-12 col-sm-4 col-md-3">
               <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item1.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item1.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
+                <iframe
+                  src="https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none">
+                  Your browser does not support iframes.
+                </iframe>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item bootstrap website col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <iframe
+                  src="https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none">
+                  Your browser does not support iframes.
+                </iframe>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item bootstrap website col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <iframe
+                  src="https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none">
+                  Your browser does not support iframes.
+                </iframe>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item bootstrap website col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <iframe
+                  src="https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html"
+                  width="100%"
+                  height="600px"
+                  style="border: none">
+                  Your browser does not support iframes.
+                </iframe>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item bootstrap instagram col-xs-12 col-sm-4 col-md-3">
+              <div class="recent-work-wrap">
+                <iframe
+                  src="https://www.instagram.com/p/C6iKs17Sm72/"
+                  width="100%"
+                  height="600px"
+                  style="border: none">
+                  Your browser does not support iframes.
+                </iframe>
               </div>
             </div>
             <!--/.portfolio-item-->
 
-            <div
-              class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item2.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item2.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item3.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item3.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item4.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item4.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item5.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item5.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item6.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item6.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item7.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item7.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/.portfolio-item-->
-
-            <div
-              class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
-              <div class="recent-work-wrap">
-                <img
-                  class="img-responsive"
-                  src="images/portfolio/recent/item8.png"
-                  alt="" />
-                <div class="overlay">
-                  <div class="recent-work-inner">
-                    <h3><a href="#">Business theme</a></h3>
-                    <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority
-                    </p>
-                    <a
-                      class="preview"
-                      href="images/portfolio/full/item8.png"
-                      rel="prettyPhoto"
-                      ><i class="fa fa-eye"></i> View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
             <!--/.portfolio-item-->
           </div>
         </div>
@@ -343,47 +249,52 @@
         data-wow-duration="1000ms"
         data-wow-delay="600ms">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="widget">
-              <h3>Company</h3>
+              <h3>About Us</h3>
               <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">We are hiring</a></li>
-                <li><a href="#">Meet the team</a></li>
-                <li><a href="#">Copyright</a></li>
+                <li>
+                  <a href="#"
+                    >Peradi Nusantara adalah sarana untuk meningkatkan Sumber
+                    Daya Manusia sehingga menjadi Pribadi yang siap bersaing di
+                    era globalisasi serta membantu pemerintah dalam hal
+                    Mencerdaskan Kehidupan Anak Bangsa.
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          <!--/.col-md-3-->
 
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="widget">
-              <h3>Support</h3>
+              <h3>Our Contact</h3>
               <ul>
-                <li><a href="#">Faq</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Forum</a></li>
-                <li><a href="#">Documentation</a></li>
+                <li><a href="#">WhatsApp : +628811809844</a></li>
+                <li><a href="#">Instagram : </a></li>
+                <li><a href="#">Tiktok : </a></li>
+                <li><a href="#">Facebook : </a></li>
+                <li><a href="#">Youtube : </a></li>
               </ul>
             </div>
           </div>
-          <!--/.col-md-3-->
 
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-4 col-sm-6">
             <div class="widget">
-              <h3>Developers</h3>
+              <h3>Our Office</h3>
               <ul>
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">SEO Marketing</a></li>
-                <li><a href="#">Theme</a></li>
-                <li><a href="#">Development</a></li>
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/GcMHapZESjQBNc4M7"
+                    target="_blank"
+                    >APL Tower Central Park Lt. 26 T3, Jl. Letjen S. Parman
+                    No.Kav. 28, RT.12/RW.6, Tj. Duren Sel., Kec. Grogol
+                    petamburan, Daerah Khusus Ibukota Jakarta 11470,
+                    Indonesia</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
-          <!--/.col-md-3-->
-
-        
-          <!--/.col-md-3-->
         </div>
       </div>
     </section>
@@ -396,19 +307,11 @@
             <div class="social">
               <ul class="social-share">
                 <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-skype"></i></a>
+                  <a
+                    href="https://www.instagram.com/peradinusantara.id/"
+                    target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -443,6 +346,6 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>   
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -30,6 +30,7 @@ const menuItems = [
     { href: "index.html", text: "Beranda" },
     { href: "about-us.html", text: "Tentang" },
     { href: "services.html", text: "Layanan" },
+    { href: "portfolio.html", text: "Berita" },
     { href: "contact-us.html", text: "Kontak" },
     { href: "https://app.peradinusantara.org/", text: "Daftar", target: "_blank" },
     { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
@@ -99,7 +100,7 @@ function jsonToText(json) {
         `Pesan: ${json.message}\n`;
 }
 // Contact form
-var form = $('#main-contact-form');	
+var form = $('#main-contact-form');
 
 var phoneNumber = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
 
@@ -108,13 +109,13 @@ form.submit(function (event) {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         university: document.getElementById("university").value,
-        subject:document.getElementById("subject").value,
-        message:document.getElementById("message").value			
-    }		
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    }
     event.preventDefault();
 
     const formattedText = jsonToText(data);
-    const uriEncodedText = encodeURIComponent(formattedText);		
+    const uriEncodedText = encodeURIComponent(formattedText);
 
     // Nomor telepon tujuan di WhatsApp
 
@@ -123,7 +124,7 @@ form.submit(function (event) {
 
     // Redirect ke URL WhatsApp
     window.open(whatsappUrl, '_blank');
-}	
+}
 );
 
 // var whatsappLink = document.getElementById('pak-handi');
