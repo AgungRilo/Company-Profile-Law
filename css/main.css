@@ -231,7 +231,7 @@ ul.social-share li a:hover {
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #151515;
+  background: #06286A;
   padding: 15px 0;
   padding-bottom: 0;
 }
@@ -332,6 +332,7 @@ ul.social-share li a:hover {
 .slider {
   position: relative;
   margin-top:130px;
+  background-color: #06286A;
 }
 
 #carousel-slider {
@@ -347,7 +348,7 @@ ul.social-share li a:hover {
 }
 
 #carousel-slider a i {
-  border: 1px solid #777;
+  border: 3px solid white;
   border-radius:50%;
   font-size: 28px;
   height: 50px;
@@ -356,6 +357,7 @@ ul.social-share li a:hover {
   top: 50%;
   width: 50px;
   color:#777;
+  background:#E8CE0E;
 }
 
 #carousel-slider a i:hover {
@@ -419,7 +421,7 @@ ul.social-share li a:hover {
   border-radius: 100%;
   line-height: 110px;
   text-align:center;
-  background: #ffffff;
+  background: #06286A;
   color: #E8CE0E;
   border: 3px solid #ffffff;
   box-shadow: inset 0 0 0 5px #f2f2f2;
@@ -433,7 +435,7 @@ ul.social-share li a:hover {
 }
 
 .feature-wrap i:hover {
-  background: #E8CE0E;
+  background: #d9534f;
   color: #fff;
   box-shadow: inset 0 0 0 5px #E8CE0E;
   -webkit-box-shadow: inset 0 0 0 5px #E8CE0E;
@@ -470,7 +472,7 @@ ul.social-share li a:hover {
 }
 
 .recent-work-wrap .recent-work-inner h3 a{
-  font-size: 24px;
+  font-size: 34px;
   color: #fff;
 }
 
@@ -508,7 +510,7 @@ ul.social-share li a:hover {
 }
 
 #services {
-  background: #000 url(../images/services/bg_services.jpg);
+  background: #06286A;
   background-size: cover;
   margin-top:70px;
 }
@@ -1805,7 +1807,7 @@ ul.sidebar-gallery {
   padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
-  background: #000;
+  background: #06286A;
 }
 
 #footer a {
@@ -1813,7 +1815,7 @@ ul.sidebar-gallery {
 }
 
 #footer a:hover {
-  color: #E8CE0E;
+  color: red;
 }
 
 #footer ul {
