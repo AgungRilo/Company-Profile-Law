@@ -1905,9 +1905,9 @@ pre code {
 }
 
 @media (min-width:1366px) {
-    /* .container {
+    .container {
         width: 1253px;        
-    } */
+    }
     #titlename {
         font-size: 18px; 
         margin: 2vh 0 0 9vw; 
