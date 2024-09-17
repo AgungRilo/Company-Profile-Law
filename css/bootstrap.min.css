@@ -1905,13 +1905,13 @@ pre code {
 }
 
 @media (min-width:1366px) {
-    .container {
+    /* .container {
         width: 1253px;        
-    }
+    } */
     #titlename {
-        font-size: 18px; /* Ukuran font terbesar untuk layar sangat besar */
-        margin: 2vh 0 0 9vw; /* Margin lebih besar */
-        text-align: left; /* Teks rata kiri */
+        font-size: 18px; 
+        margin: 2vh 0 0 9vw; 
+        text-align: left; 
         color: white;
     }
     .responsiveImages{
