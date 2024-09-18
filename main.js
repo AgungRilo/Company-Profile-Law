@@ -73,7 +73,7 @@ const menuItems = [
 	{ href: "portfolio.html", text: "Portfolio" },
 	{ href: "contact-us.html", text: "Kontak" },
 	{ href: "https://wuisanlawschool.net/", text: "Daftar", target: "_blank" },
-	{ href: textMenu , text: "Jasa Pembuatan Law Firm", target: "_blank" }
+	// { href: textMenu , text: "Jasa Pembuatan Law Firm", target: "_blank" }
 ];
 
 // Dapatkan URL halaman saat ini

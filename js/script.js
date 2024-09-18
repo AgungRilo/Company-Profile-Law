@@ -33,7 +33,7 @@ const menuItems = [
     { href: "portfolio.html", text: "Berita" },
     { href: "contact-us.html", text: "Kontak" },
     { href: "https://app.peradinusantara.org/", text: "Daftar", target: "_blank" },
-    { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
+    // { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
     // { href: "portfolio.html", text: "Portfolio" },
 ];
 
