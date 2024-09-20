@@ -15,6 +15,14 @@ function resizeImage() {
 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate content loading time with a timeout
+    setTimeout(function() {
+      document.getElementById('skeleton-loader').classList.add('hidden');
+      document.getElementById('contents').classList.remove('hidden');
+    }, 4200); // 3 seconds loading time
+  });
+
 // Panggil fungsi resizeImage saat halaman dimuat
 window.onload = resizeImage;
 
