@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=utf-8');
 
 echo "Webhook";
-$conn = mysqli_connect("localhost", "perh4452_backup01_peradi", "oj(5tVzX@{YF", "perh4452_backup01_peradi");
+$conn = mysqli_connect("localhost", "perh4452_peradi", "k)p*!ogmVzWR", "perh4452_peradi");
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
@@ -10,14 +10,31 @@ if (mysqli_connect_errno()) {
 
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
-$device = $data['device'];
-$id = $data['id'];
-$stateid = $data['stateid'];
-$name = $data['name'];
-$state = $data['state'];
-$sender = $data['sender'];
+if ($data) {
+    $propertyCount = count(get_object_vars($data));
 
-mysqli_query($conn, "INSERT INTO report (id,device,target,message,status) VALUES ('$id','$name','$sender','$json','$name')");
+    if ($propertyCount > 15) {
+
+        $quick = $data['quick'];
+        $device = $data['device'];
+        $pesan = $data['pesan'];
+        $pengirim = $data['pengirim'];
+        $member = $data['member'];
+        $message = $data['message'];
+        $text = $data['text'];
+        $sender = $data['sender'];
+        $name = $data['name'];
+        $type = $data['type'];
+
+        $query = "INSERT INTO chat_whatsapp 
+                    (quick,device,pesan,pengirim,member,message,text,sender,name,type) 
+                    VALUES 
+                    ('$quick', '$device', '$pesan', '$member', '$message', '$text', '$sender', '$name', '$type')";
+
+        mysqli_query($conn, $query);
+    }
+}
+
   
 // //update status and state
 // if(isset($id) && isset($stateid)){
