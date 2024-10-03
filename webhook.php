@@ -15,7 +15,7 @@ if ($data) {
 
     if ($propertyCount > 15) {
 
-        $quick = $data['quick'];
+        $quick = $data['quick'] == true ? 1 : 0;
         $device = $data['device'];
         $pesan = $data['pesan'];
         $pengirim = $data['pengirim'];
