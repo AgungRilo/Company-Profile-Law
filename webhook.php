@@ -168,7 +168,9 @@ function process_call_wa($conn, $handphone, $namalengkap)
         if (!empty($gettoken) && $notifSend == 'Y') {
             //send group chat
             $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " 
-Admin Peradi, Silahkan Gabung Group
+Admin Peradi, 
+Silahkan Gabung Group
+
 " . $linkGroupWaSosilisasi . ".
             
 Jika butuh bantuan ketik 'hai'?";
