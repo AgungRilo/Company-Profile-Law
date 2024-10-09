@@ -163,7 +163,8 @@ function process_call_wa($conn, $handphone, $namalengkap)
         } else {
             error_log("Failed to prepare token query: " . mysqli_error($conn));
         }
-        if (!empty($gettoken)) {
+        $notifSend = getParameterValue($conn, '@sendNotifAutoChatbotFromSystem');
+        if (!empty($gettoken) && $notifSend == 'Y') {
             $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " Admin Peradi, butuh bantuan ketik 'hai'?";
             sendDatToWA($gettoken, $dataSend, $handphone);
         } else {
