@@ -169,7 +169,7 @@ function process_call_wa($conn, $handphone, $namalengkap)
             //send group chat
             $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " 
 Admin Peradi, 
-Silahkan Gabung Group Sosilisasi
+Silahkan Gabung Group Sosialisasi
 
 " . $linkGroupWaSosilisasi . ".
             
