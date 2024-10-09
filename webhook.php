@@ -146,10 +146,29 @@ function process_call_wa($conn, $handphone, $namalengkap)
         }
     }
 
-    // Redirect to WhatsApp if a sender's phone number was found
+
     if ($sender != "") {
-        $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " Admin Peradi, Ada yang bisa di bantu ?";
-        sendDatToWA($sender, $dataSend, $handphone);
+        $tokenSql = "SELECT * FROM token_wa WHERE id_user = ?";
+        if ($stmt = mysqli_prepare($conn, $tokenSql)) {
+            mysqli_stmt_bind_param($stmt, 'i', $id_userWa);
+            mysqli_stmt_execute($stmt);
+            $tokenResult = mysqli_stmt_get_result($stmt);
+            if ($token = mysqli_fetch_assoc($tokenResult)) {
+                $gettoken = $token['token'];
+            } else {
+                error_log("No token found for user ID: $id_userWa");
+                $gettoken = ""; // Set an empty token if not found
+            }
+            mysqli_stmt_close($stmt);
+        } else {
+            error_log("Failed to prepare token query: " . mysqli_error($conn));
+        }
+        if (!empty($gettoken)) {
+            $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " Admin Peradi, Ada yang bisa dibantu?";
+            sendDatToWA($gettoken, $dataSend, $handphone);
+        } else {
+            error_log("Token is empty, cannot send WhatsApp message.");
+        }
     }
 }
 
