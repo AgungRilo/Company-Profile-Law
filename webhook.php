@@ -168,10 +168,10 @@ function process_call_wa($conn, $handphone, $namalengkap)
         if (!empty($gettoken) && $notifSend == 'Y') {
             //send group chat
             $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " 
-            Admin Peradi, Silahkan Gabung Group
-            " . $linkGroupWaSosilisasi . ".
+Admin Peradi, Silahkan Gabung Group
+" . $linkGroupWaSosilisasi . ".
             
-            Jika butuh bantuan ketik 'hai'?";
+Jika butuh bantuan ketik 'hai'?";
             sendDatToWA($gettoken, $dataSend, $handphone);
         } else {
             error_log("Token is empty, cannot send WhatsApp message.");
