@@ -194,7 +194,7 @@ function sendDatToWA($tokenSender, $dataSend, $receiveSend)
             'preview ' => true
         ),
         CURLOPT_HTTPHEADER => array(
-            'Authorization: $tokenSender'
+            'Authorization: ' . $tokenSender // Corrected to use the actual value of $tokenSender
         ),
     ));
 
