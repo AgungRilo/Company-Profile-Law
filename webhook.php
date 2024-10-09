@@ -164,7 +164,7 @@ function process_call_wa($conn, $handphone, $namalengkap)
             error_log("Failed to prepare token query: " . mysqli_error($conn));
         }
         if (!empty($gettoken)) {
-            $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " Admin Peradi, Ada yang bisa dibantu?";
+            $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " Admin Peradi, butuh bantuan ketik 'hai'?";
             sendDatToWA($gettoken, $dataSend, $handphone);
         } else {
             error_log("Token is empty, cannot send WhatsApp message.");
