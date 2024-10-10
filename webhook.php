@@ -22,8 +22,8 @@ if (is_array($data)) {
     // Log the number of properties to check if all fields were received
     $propertyCount = count($data);
     error_log("Property count: $propertyCount");
-
-    if ($propertyCount > 15) {
+    $recordWa = getParameterValue($conn, '@recordChatWaOfficial');
+    if ($propertyCount > 15 && $recordWa == 'Y') {
         // Parse the JSON data
         $quick = isset($data['quick']) && $data['quick'] == true ? 1 : 0;
         $device = $data['device'];
@@ -63,7 +63,12 @@ if (is_array($data)) {
         }
 
         // send notification if 'pesan' contains "Halo" or "halo"
-        if (strpos($pesan, 'Halo') !== false || strpos($pesan, 'halo') !== false) {
+        if (
+            strpos($pesan, 'Halo') !== false ||
+            strpos($pesan, 'halo') !== false ||
+            strpos($pesan, 'Halo!') !== false ||
+            strpos($pesan, 'halo!') !== false
+        ) {
             process_call_wa($conn, $sender, $name);
         }
     } else {
