@@ -227,7 +227,7 @@ function toggleWhatsappList() {
     var cutoffDate = new Date('2024-10-11');
     
     // Cek apakah tanggal saat ini sudah melewati 11 Oktober 2024
-    if (currentDate > cutoffDate) {
+    if (currentDate >= cutoffDate) {
       // Jika sudah melewati, buka tab baru dengan link yang diberikan
       window.open('https://app.peradinusantara.org/cs', '_blank');
     } else {
