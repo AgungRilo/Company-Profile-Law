@@ -23,52 +23,55 @@ if (is_array($data)) {
     $propertyCount = count($data);
     error_log("Property count: $propertyCount");
     $recordWa = getParameterValue($conn, '@recordChatWaOfficial');
+
+    // Make sure data has enough properties and check if recording is enabled
     if ($propertyCount > 15 && $recordWa == 'Y') {
-        // Parse the JSON data
-        $quick = isset($data['quick']) && $data['quick'] == true ? 1 : 0;
-        $device = $data['device'];
-        $pesan = $data['pesan'];
-        $pengirim = $data['pengirim'];
-        $member = $data['member'];
-        $message = $data['message'];
-        $text = $data['text'];
-        $sender = $data['sender'];
-        $name = $data['name'];
-        $type = $data['type'];
+        // Parse the JSON data with additional checks for missing fields
+        $quick = isset($data['quick']) && $data['quick'] === true ? 1 : 0;
+        $device = isset($data['device']) ? $data['device'] : '';
+        $pesan = isset($data['pesan']) ? $data['pesan'] : '';
+        $pengirim = isset($data['pengirim']) ? $data['pengirim'] : '';
+        $member = isset($data['member']) ? $data['member'] : '';
+        $message = isset($data['message']) ? $data['message'] : '';
+        $text = isset($data['text']) ? $data['text'] : '';
+        $sender = isset($data['sender']) ? $data['sender'] : '';
+        $name = isset($data['name']) ? $data['name'] : '';
+        $type = isset($data['type']) ? $data['type'] : '';
 
-        // Prepare SQL query to prevent SQL injection
-        $query = "INSERT INTO chat_whatsapp 
-                  (quick, device, pesan, pengirim, member, message, text, sender, name, type) 
-                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-        if ($stmt = mysqli_prepare($conn, $query)) {
-            // Bind parameters (TINYINT=integer, VARCHAR=text)
-            mysqli_stmt_bind_param($stmt, 'isssssssss', $quick, $device, $pesan, $pengirim, $member, $message, $text, $sender, $name, $type);
-
-            // Execute the prepared statement
-            if (mysqli_stmt_execute($stmt)) {
-                echo "Data inserted successfully!";
-            } else {
-                // Log the error if execution fails
-                error_log("Query execution failed: " . mysqli_stmt_error($stmt));
-                echo "Error inserting data.";
-            }
-
-            // Close the statement
-            mysqli_stmt_close($stmt);
-        } else {
-            // Log the error if the statement preparation fails
-            error_log("Query preparation failed: " . mysqli_error($conn));
-            echo "Error preparing query.";
-        }
-
-        // send notification if 'pesan' contains "Halo" or "halo"
+        // send notification and insert into DB if 'pesan' contains "Halo" or "halo"
         if (
             strpos($pesan, 'Halo') !== false ||
             strpos($pesan, 'halo') !== false ||
             strpos($pesan, 'Halo!') !== false ||
             strpos($pesan, 'halo!') !== false
         ) {
+            // Prepare SQL query to prevent SQL injection
+            $query = "INSERT INTO chat_whatsapp 
+                    (quick, device, pesan, pengirim, member, message, text, sender, name, type) 
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+            if ($stmt = mysqli_prepare($conn, $query)) {
+                // Bind parameters (TINYINT=integer, VARCHAR=text)
+                mysqli_stmt_bind_param($stmt, 'isssssssss', $quick, $device, $pesan, $pengirim, $member, $message, $text, $sender, $name, $type);
+
+                // Execute the prepared statement
+                if (mysqli_stmt_execute($stmt)) {
+                    echo "Data inserted successfully!";
+                } else {
+                    // Log the error if execution fails
+                    error_log("Query execution failed: " . mysqli_stmt_error($stmt));
+                    echo "Error inserting data.";
+                }
+
+                // Close the statement
+                mysqli_stmt_close($stmt);
+            } else {
+                // Log the error if the statement preparation fails
+                error_log("Query preparation failed: " . mysqli_error($conn));
+                echo "Error preparing query.";
+            }
+
+            // Call process_call_wa if a greeting message is detected
             process_call_wa($conn, $sender, $name);
         }
     } else {
@@ -76,9 +79,10 @@ if (is_array($data)) {
     }
 } else {
     // Log an error if the JSON is not decoded properly
-    error_log("Failed to decode JSON: " . json_last_error_msg());
+    error_log("Failed to decode JSON: " . json_last_error_msg() . " | Data: " . $json);
     echo "Invalid JSON data.";
 }
+
 
 // Close the database connection
 mysqli_close($conn);
