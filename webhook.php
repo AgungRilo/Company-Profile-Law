@@ -177,12 +177,21 @@ function process_call_wa($conn, $handphone, $namalengkap)
         if (!empty($gettoken) && $notifSend == 'Y') {
             //send group chat
             $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " 
-Admin Peradi, 
-Silahkan Gabung Group Sosialisasi
+Wasekjend Peradi Nusantara.
 
+Silahkan Gabung Group Sosialisasi kami karena disana kami akan membahas :
+1. Dasar UU mengapa PKPA UPA dan Magang Peradi Nusantara dapat dilaksanakan sebelum SH?
+2. Bagaimana Legalitas Peradi Nusantara?
+3. Apa itu Program Double degree?
+4. Apa itu Program Lawpreneurship?
+5. Apa saja benefit bergabung di Peradi Nusantara?
+6. Apa itu Program Representative PN?
+7. Bagaimana Mekanisme Pembayarannya?
+
+KLIK TOMBOL WA GROUP DI BAWAH INI 👇👇:
 " . $linkGroupWaSosilisasi . ".
             
-Jika butuh bantuan ketik 'hai'?";
+Terima Kasih.";
             sendDatToWA($gettoken, $dataSend, $handphone);
         } else {
             error_log("Token is empty, cannot send WhatsApp message.");
