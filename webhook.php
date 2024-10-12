@@ -193,12 +193,55 @@ KLIK TOMBOL WA GROUP DI BAWAH INI 👇👇:
             
 Terima Kasih.";
             sendDatToWA($gettoken, $dataSend, $handphone);
+            sendDatToWAPoll($gettoken, $handphone);
         } else {
             error_log("Token is empty, cannot send WhatsApp message.");
         }
     }
 }
 
+function sendDatToWAPoll($tokenSender, $receiveSend)
+{
+    $timeSechedule = 0;
+    $message = "Halo,
+Selamat datang di Peradi Nusantara
+Silahkan Pilih Pertanyaan Berikut :";
+    $choices = 'Apa itu Peradi Nusantara ?,Layanan dan pelatihan apa Saja ?,Persyaratan nya apa saja ?,Harga nya berapa saja ?,Waktu dan Metode belajar nya seperti apa ?,Apakah disediakan Magang ?,Apakah bisa di ulang pembelajarannya ?,Bukan sarjana hukum apakah bisa ikut PKPA ?,Metode pembayaran nya apa saja ?,Pengajar nya siapa saja ?,Apa itu program Double Profesi ?,Bagaimana jika UPA tidak lulus ?';
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.fonnte.com/send',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => array(
+            'target' => $receiveSend,
+            'message' => $message,
+            'choices' => $choices,
+            'select' => 'single',
+            'pollname' => 'pollku',
+            'url' => 'https://md.fonnte.com/images/wa-logo.png',
+            'schedule' => $timeSechedule,
+            'preview ' => true
+        ),
+        CURLOPT_HTTPHEADER => array(
+            'Authorization: ' . $tokenSender // Corrected to use the actual value of $tokenSender
+        ),
+    ));
+
+    $response = curl_exec($curl);
+    if (curl_errno($curl)) {
+        $error_msg = curl_error($curl);
+    }
+    curl_close($curl);
+
+    if (isset($error_msg)) {
+        // echo $error_msg;
+    }
+}
 
 function sendDatToWA($tokenSender, $dataSend, $receiveSend)
 {
