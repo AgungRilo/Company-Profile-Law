@@ -38,6 +38,9 @@ if (is_array($data)) {
         $name = isset($data['name']) ? $data['name'] : '';
         $type = isset($data['type']) ? $data['type'] : '';
 
+        //substring pesan 
+        $pesan = substr($pesan, 0, 10);
+
         // $userSql = "SELECT * FROM history_call_center WHERE customer_phone = ?";
         // if ($stmt = mysqli_prepare($conn, $userSql)) {
         //     // Assuming $pengirim is a string (e.g., phone numbers can have dashes or country codes)
