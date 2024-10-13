@@ -38,7 +38,41 @@ if (is_array($data)) {
         $name = isset($data['name']) ? $data['name'] : '';
         $type = isset($data['type']) ? $data['type'] : '';
 
+        //substring pesan 
+        $pesan = substr($pesan, 0, 10);
+
+        // $userSql = "SELECT * FROM history_call_center WHERE customer_phone = ?";
+        // if ($stmt = mysqli_prepare($conn, $userSql)) {
+        //     // Assuming $pengirim is a string (e.g., phone numbers can have dashes or country codes)
+        //     mysqli_stmt_bind_param($stmt, 's', $pengirim);  // Changed 'i' to 's' for string
+        //     mysqli_stmt_execute($stmt);
+        //     $userResult = mysqli_stmt_get_result($stmt);
+        //     $user = mysqli_fetch_assoc($userResult);
+        //     mysqli_stmt_close($stmt);
+
+        //     // Check if the user exists before proceeding
+        //     if ($user) {
+        //         $id_userWa = $user['id_user'];
+
+        //         $date = new DateTime("now", new DateTimeZone("Asia/Jakarta"));
+        //         $formattedDate = $date->format('Y-m-d H:i:s');
+
+        //         // Update the last call time for this user in history_call_center
+        //         $updateSql = "UPDATE history_call_center SET last_call = ? WHERE id_user = ?";
+        //         if ($stmt = mysqli_prepare($conn, $updateSql)) {
+        //             mysqli_stmt_bind_param($stmt, 'si', $formattedDate, $id_userWa);
+        //             mysqli_stmt_execute($stmt);
+        //             mysqli_stmt_close($stmt);
+        //         }
+        //     } else {
+        //         // Handle case where user is not found
+        //         echo "No user found with the provided phone number.";
+        //     }
+        // }
+
+
         // send notification and insert into DB if 'pesan' contains "Halo" or "halo"
+
         if (
             strpos($pesan, 'Halo') !== false ||
             strpos($pesan, 'halo') !== false ||
