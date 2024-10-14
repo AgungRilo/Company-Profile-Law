@@ -1629,6 +1629,7 @@ ul.faq li > div h3 {
   border-radius: 0;
   overflow: hidden;
   margin-bottom: 50px;
+  margin-top:-26px;
 }
 
 .blog .blog-item .img-blog {
@@ -1638,6 +1639,7 @@ ul.faq li > div h3 {
 
 .blog .blog-item .blog-content {
   padding-bottom: 25px;
+  margin-top:-50px;
 }
 
 .blog .blog-item .blog-content h2 {

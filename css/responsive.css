@@ -12,8 +12,6 @@
     margin-right: -10px;
   }
 
-  
-
 }
 
 /* md */
@@ -300,13 +298,23 @@
   }
 
  
-    
+  .blog .blog-item .blog-content h2 {
+    margin-top: 0;
+    font-size: 24px !important;
+    margin-left: 18px;
+    max-width: 80vw;
+  }
 
 }
 
 /* XS Portrait */
 @media (max-width: 480px) {
-
+  .blog .blog-item .blog-content h2 {
+    margin-top: 0;
+    font-size: 24px !important;
+    margin-left: 18px;
+    max-width: 80vw;
+  }
 
 }
 
