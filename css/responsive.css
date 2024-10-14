@@ -183,6 +183,9 @@
   .blog .blog-item .entry-meta > span a{
     font-size: 10px;
   }
+  .list-news-resp{
+    
+  }
 }
 
 /* xs */
@@ -282,15 +285,21 @@
 
   .blog .blog-item .entry-meta{
     margin-bottom: 20px;
+    margin-left: 15px;
+    width: 77vw;
   }
 
   .blog .blog-item .blog-content h3 {
     margin-bottom: 20px;
+    margin-left: 15px;
+    width: 77vw;
   }
 
   .post_reply_comments {
     padding-left: 20px;
   }
+
+ 
     
 
 }

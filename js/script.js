@@ -15,13 +15,13 @@ function resizeImage() {
 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Simulate content loading time with a timeout
-    setTimeout(function() {
-      document.getElementById('skeleton-loader').classList.add('hidden');
-      document.getElementById('contents').classList.remove('hidden');
+    setTimeout(function () {
+        document.getElementById('skeleton-loader').classList.add('hidden');
+        document.getElementById('contents').classList.remove('hidden');
     }, 4200); // 3 seconds loading time
-  });
+});
 
 // Panggil fungsi resizeImage saat halaman dimuat
 window.onload = resizeImage;
@@ -38,7 +38,8 @@ const menuItems = [
     { href: "index.html", text: "Beranda" },
     { href: "about-us.html", text: "Tentang" },
     { href: "services.html", text: "Layanan" },
-    { href: "portfolio.html", text: "Berita" },
+    { href: "news.html", text: "Berita" },
+    // { href: "portfolio.html", text: "Berita" },
     { href: "contact-us.html", text: "Kontak" },
     { href: "https://app.peradinusantara.org/", text: "Daftar", target: "_blank" },
     // { href: textMenu, text: "Jasa Pembuatan Law Firm", target: "_blank" }
@@ -135,112 +136,225 @@ form.submit(function (event) {
 }
 );
 
-// var whatsappLink = document.getElementById('pak-handi');
-// var whatsappLink2 = document.getElementById('gabi');
-// var whatsappLink3 = document.getElementById('pak-ronald');
-// var whatsappLink4 = document.getElementById('bu-irene');
+// Tangkap input dan tambahkan event listener untuk mendeteksi perubahan teks
+document.getElementById('searchInput').addEventListener('input', function () {
+    searchNews(); // Panggil fungsi pencarian saat teks berubah
+});
 
-// const phoneNumberHandi = "6287782000561"; // Ganti dengan nomor tujuan yang sesuai
-// const phoneNumberGabi = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-// const phoneNumberRonald = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
-// const phoneNumberIrene = "628979941802"; // Ganti dengan nomor tujuan yang sesuai
+const news = [
+    {
+        title:"Peradi Nusantara Mengadakan PKΡΑ UPA dan Brevet AB Angkatan ke-9 dengan Menghadirkan Eks Wakapolri", 
+        desc:"Jejakinformasi.id. Jakarta Peradi Nusantara mengadakan Pendidikan Khusus Profesi Advokat. Ujian Profesi Advokat dan Brevet AB (Profesi Kuasa Hukum Pajak) yang sebelumnya pada Hari Pertama untuk sesi pembukaan pada pukul 16:00-18:00 Wib yang disampaikan oleh Ketua Umum Peradi Nusantara Ronald Samuel Wuisan.",
+        src:"https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html", 
+        editor:"Jejak Informasi",
+        category:"Web", 
+        date:"14 OKT 2024",
+    },    
+    {
+        title:"Wow Peradi Nusantara Luar biasa!! 112 Peserta PKPA UPA Brevet AB di nyatakan lulus dengan nilai yang sangat memuaskan, yaitu A+.", 
+        desc:"Berantas.co.id, – Ketika di temui di Kantor APL Tower, Ketum Peradi Nusantara Ronald Samuel Wuisan mengatakan bersyukur para peserta 99% Lulus dan bangga kepada para peserta yang ikut. Itu artinya mereka memperhatikan materi yang di sampaikan oleh Para Profesor yang mengajar. Pengajar kami mulai dari Prof OC Kaligis (Advokat Senior dan Dosen), Prof Amad Sudiro, (Rektor UNTAR) Prof Ariawan Gunadi, ( Ketua Yayasan UNTAR/Ahli PHI & Perdagangan & Bisnis), Prof Anshari Ritonga (Ex Dirjen Pajak), Prof BF Sihombing (Ahli Agraria), Komjen Pol (P) Oegroseno (Ex Wakapolri), Ariawan Rahmat, BKP (Konsultan Pajak/Advokat/SekJen Peradi Pajak Nusantara), Irwan BKP (Waketum Peradi Pajak Nusantara/Advokat/konsultan pajak) dan masih banyak lagi.",
+        src:"https://www.berantas.co.id/wow-peradi-nusantara-luar-biasa-112-peserta-pkpa-upa-brevet-ab-di-nyatakan-lulus-dengan-nilai-yang-sangat-memuaskan-yaitu-a/", 
+        editor:"Berantas",
+        category:"Web", 
+        date:"14 OKT 2024",
+    }, 
+    {
+        title:"Wow Peradi Nusantara Luar biasa!! 112 Peserta PKPA UPA Brevet AB di nyatakan lulus dengan nilai yang sangat memuaskan, yaitu A+.", 
+        desc:"Metrokitanews.com, -Ketika di temui di Kantor APL Tower, Ketum Peradi Nusantara Ronald Samuel Wuisan mengatakan bersyukur para peserta 99% Lulus dan bangga kepada para peserta yang ikut. Itu artinya mereka memperhatikan materi yang di sampaikan oleh Para Profesor yang mengajar.",
+        src:"https://metrokitanews.com/2024/07/18/wow-peradi-nusantara-luar-biasa-112-peserta-pkpa-upa-brevet-ab-di-nyatakan-lulus-dengan-nilai-yang-sangat-memuaskan-yaitu-a/", 
+        editor:"Metro Kita News",
+        category:"Web", 
+        date:"18 JUL 2024",
+    },  
+    {
+        title:"Peradi Nusantara", 
+        desc:"Selamat datang di Peradi Nusantara! Jadi bagian dari komunitas hukum terdepan kami dan tingkatkan karier Anda melalui Program PKPA & UPA. Daftarlah sekarang dan sambut masa depan yang penuh prestasi dalam profesi hukum!.",
+        src:"https://www.instagram.com/reel/C6iKs17Sm72/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"4 MEI 2024",
+    },  
+]
 
-// const uriEncodedTextHandi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-// const uriEncodedTextGabi = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-// const uriEncodedTextRonald = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
-// const uriEncodedTextIrene = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+// Inisialisasi variabel global untuk pagination
+let currentPage = 1;
+const itemsPerPage = 2;
+let selectedCategory = '';
 
-// // URL WhatsApp API dengan teks terenkode
-// whatsappLink.href = `https://api.whatsapp.com/send?phone=${phoneNumberHandi}&text=${uriEncodedTextHandi}`;
-// whatsappLink2.href = `https://api.whatsapp.com/send?phone=${phoneNumberGabi}&text=${uriEncodedTextGabi}`;
-// whatsappLink3.href = `https://api.whatsapp.com/send?phone=${phoneNumberRonald}&text=${uriEncodedTextRonald}`;
-// whatsappLink4.href = `https://api.whatsapp.com/send?phone=${phoneNumberIrene}&text=${uriEncodedTextIrene}`;
-// whatsappIcon.addEventListener('click', function (event) {
-//     event.preventDefault(); // Prevent any default action on click
-//     event.stopPropagation(); // Stop the click from propagating
+// Fungsi untuk menampilkan berita dengan pagination
+function displayNewsWithPagination(newsArray) {
+    const newsContainer = document.getElementById('list-news');
+    newsContainer.innerHTML = ''; // Kosongkan kontainer sebelum render
 
-//     // Toggle visibility on click
-//     if (whatsappText.style.transform === "translateX(0px)") {
-//         whatsappText.style.transform = "translateX(100%)";
-//         whatsappText.style.opacity = "0";
-//     } else {
-//         whatsappText.style.transform = "translateX(0px)";
-//         whatsappText.style.opacity = "1";
-//     }
-// });
-// document.addEventListener("DOMContentLoaded", function () {
-//     var whatsappLinks = {
-//         'pak-handi': '6287782000561',
-//         'gabi': '628979941802',
-//         'pak-ronald': '6281317843152',
-//         'bu-irene': '6282110686368'
-//     };
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedNews = newsArray.slice(startIndex, endIndex);
 
-//     var uriEncodedText = encodeURIComponent("Hallo Saya ingin bertanya perihal peradi nusantara");
+    // Render berita pada halaman saat ini
+    paginatedNews.forEach(item => {
+        const newsHTML = `
+            <div class="row mb-4">
+                <div class="col-sm-2 text-center">
+                    <div class="entry-meta"> 
+                        <span style="color:#06286A" id="publish_date">${item.date}</span>
+                        <span><i class="fa fa-user"></i> <a>${item.editor}</a></span>                                   
+                    </div>
+                </div>
+                <div class="col-sm-10 blog-content">
+                    <a href="${item.src}" target="_blank">
+                        <img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" />
+                    </a>
+                    <h2>
+                        <a target="_blank" style="color:#06286A" href="${item.src}">${item.title}</a>
+                    </h2>
+                    <h3>${item.desc}</h3>
+                    <a class="btn btn-primary readmore" style="color:black" href="${item.src}" target="_blank">
+                        Lihat Selengkapnya <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+        newsContainer.innerHTML += newsHTML;
+    });
 
-//     // Set href for each WhatsApp link
-//     for (var id in whatsappLinks) {
-//         var linkElement = document.getElementById(id);
-//         linkElement.href = `https://api.whatsapp.com/send?phone=${whatsappLinks[id]}&text=${uriEncodedText}`;
+    renderPagination(newsArray.length); // Perbarui pagination
+}
 
-//         // Add click event listener to each link to prevent direct navigation from parent click
-//         linkElement.addEventListener('click', function (event) {
-//             event.stopPropagation(); // Prevent the click from affecting parent elements
-//         });
-//     }
+// Fungsi untuk memperbarui pagination
+function renderPagination(totalItems) {
+    const paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = ''; // Kosongkan pagination sebelum render
 
-//     // Handle click to toggle visibility of WhatsApp list
-//     var whatsappIcon = document.querySelector('.whatsapp-icon');
-//     var whatsappText = document.querySelector('.whatsapp-text');
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-//     whatsappIcon.addEventListener('click', function (event) {
-//         event.preventDefault(); // Prevent any default action on click
-//         event.stopPropagation(); // Stop the click from propagating
+    // Tombol Previous
+    paginationContainer.innerHTML += `
+        <li class="${currentPage === 1 ? 'disabled' : ''}">
+            <a href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-long-arrow-left"></i> Previous Page</a>
+        </li>
+    `;
 
-//         // Toggle visibility on click
-//         if (whatsappText.style.transform === "translateX(0px)") {
-//             whatsappText.style.transform = "translateX(100%)";
-//             whatsappText.style.opacity = "0";
-//         } else {
-//             whatsappText.style.transform = "translateX(0px)";
-//             whatsappText.style.opacity = "1";
-//         }
-//     });
+    // Nomor halaman
+    for (let i = 1; i <= totalPages; i++) {
+        paginationContainer.innerHTML += `
+            <li class="${currentPage === i ? 'active' : ''}">
+                <a href="#" onclick="changePage(${i})">${i}</a>
+            </li>
+        `;
+    }
 
-//     // Optional: Hide whatsapp-text when clicking outside
-//     document.addEventListener('click', function (event) {
-//         // Prevent toggling if the click is inside the whatsapp text area
-//         if (!whatsappText.contains(event.target) && whatsappText.style.transform === "translateX(0px)") {
-//             whatsappText.style.transform = "translateX(100%)";
-//             whatsappText.style.opacity = "0";
-//         }
-//     });
-// });
+    // Tombol Next
+    paginationContainer.innerHTML += `
+        <li class="${currentPage === totalPages ? 'disabled' : ''}">
+            <a href="#" onclick="changePage(${currentPage + 1})">Next Page <i class="fa fa-long-arrow-right"></i></a>
+        </li>
+    `;
+}
 
-// function toggleWhatsappList() {
-//     const whatsappList = document.getElementById('whatsappList');
-//     whatsappList.style.display = whatsappList.style.display === 'none' || whatsappList.style.display === '' ? 'block' : 'none';
-// }
+// Fungsi untuk mengubah halaman
+function changePage(page) {
+    const totalPages = Math.ceil(news.length / itemsPerPage);
+
+    if (page < 1 || page > totalPages) return; // Cegah halaman tidak valid
+    currentPage = page; // Perbarui halaman saat ini
+    searchNews(); // Render ulang berita berdasarkan halaman baru
+}
+
+// Fungsi pencarian berita
+function searchNews() {
+    const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    // Filter berita berdasarkan input dan kategori
+    const matchedNews = news.filter(item =>
+        item.title.toLowerCase().includes(searchInput) &&
+        (selectedCategory === '' || item.category === selectedCategory)
+    );
+
+    if (matchedNews.length > 0) {
+        displayNewsWithPagination(matchedNews);
+    } else {
+        document.getElementById('list-news').innerHTML = '<p>Berita tidak ditemukan!</p>';
+        document.getElementById('pagination').innerHTML = ''; // Kosongkan pagination jika tidak ada hasil
+    }
+}
+
+// Fungsi untuk menampilkan kategori dengan badge jumlah berita
+function displayCategories() {
+    const categoryList = document.getElementById('category-list');
+    const categoryCounts = getCategoryCounts();
+
+    Object.keys(categoryCounts).forEach(category => {
+        const categoryHTML = `
+            <li>
+                <a href="#" id="category-${category}" onclick="filterByCategory('${category}')">
+                    ${category} <span class="badge">${categoryCounts[category]}</span>
+                </a>
+            </li>
+        `;
+        categoryList.innerHTML += categoryHTML;
+    });
+}
+
+// Fungsi untuk menghitung jumlah berita per kategori
+function getCategoryCounts() {
+    const counts = {};
+    news.forEach(item => {
+        counts[item.category] = (counts[item.category] || 0) + 1;
+    });
+    return counts;
+}
+
+// Fungsi untuk memfilter berdasarkan kategori
+function filterByCategory(category) {
+    // selectedCategory = category;
+    // currentPage = 1;
+    // searchNews();
+    const activeCategory = document.querySelector(`#category-${category}`); // Elemen kategori yang dipilih
+
+    // Jika kategori yang dipilih sudah aktif, uncheck dan reset kategori
+    if (activeCategory && activeCategory.classList.contains('active-category')) {
+        activeCategory.classList.remove('active-category'); // Hapus class aktif
+        selectedCategory = ''; // Reset kategori yang dipilih
+    } else {
+        // Hapus class aktif dari semua kategori
+        const allCategories = document.querySelectorAll('.blog_category li a');
+        allCategories.forEach(cat => cat.classList.remove('active-category'));
+
+        // Tambahkan class aktif ke kategori yang dipilih
+        if (activeCategory) activeCategory.classList.add('active-category');
+        selectedCategory = category; // Set kategori yang dipilih
+    }
+
+    currentPage = 1; // Reset ke halaman pertama
+    searchNews(); // Refresh pencarian dan tampilkan hasil berdasarkan kategori
+}
+
+// Tampilkan semua berita dan kategori saat halaman dimuat
+window.onload = function () {
+    displayNewsWithPagination(news);
+    displayCategories();
+};
+
 
 function toggleWhatsappList() {
     var currentDate = new Date();
     var cutoffDate = new Date('2024-10-11');
-    
+
     // Cek apakah tanggal saat ini sudah melewati 11 Oktober 2024
     if (currentDate >= cutoffDate) {
-      // Jika sudah melewati, buka tab baru dengan link yang diberikan
-      window.open('https://app.peradinusantara.org/cs', '_blank');
+        // Jika sudah melewati, buka tab baru dengan link yang diberikan
+        window.open('https://app.peradinusantara.org/cs', '_blank');
     } else {
-      // Jika belum, toggle tampilan daftar nomor WhatsApp
-      var whatsappList = document.getElementById('whatsappList');
-      if (whatsappList.style.display === 'block') {
-        whatsappList.style.display = 'none';
-      } else {
-        whatsappList.style.display = 'block';
-      }
+        // Jika belum, toggle tampilan daftar nomor WhatsApp
+        var whatsappList = document.getElementById('whatsappList');
+        if (whatsappList.style.display === 'block') {
+            whatsappList.style.display = 'none';
+        } else {
+            whatsappList.style.display = 'block';
+        }
     }
-  }
-  
+}
+
 
 function sendMessage(number) {
     const message = encodeURIComponent('Hallo Saya ingin bertanya perihal peradi nusantara');
@@ -284,3 +398,6 @@ showSlide(currentSlide);
 $("a[rel^='prettyPhoto']").prettyPhoto({
     social_tools: false
 });
+
+
+

@@ -160,3 +160,25 @@ whatsappContainer.addEventListener('click', function () {
         whatsappText.style.display = 'block';
     }
 });
+
+//fungsi search berita
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+	event.preventDefault(); // Mencegah halaman reload	
+  
+	searchNews(); // Panggil fungsi pencarian
+  });
+  
+  function searchNews() {	
+	const searchInput = document.getElementById('searchInput').value.trim().toLowerCase();	
+  
+	const iframe = document.getElementById('newsIframe1');
+	const newsLinks = {
+	  'peradi-nusantara-mengadakan-pkpa-upa': 'https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html',
+	};
+  
+	if (newsLinks[searchInput]) {	  
+	  iframe.src = newsLinks[searchInput]; // Ganti src iframe dengan link yang sesuai
+	} else {	  
+	  alert('Berita tidak ditemukan!');
+	}
+  }
