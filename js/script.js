@@ -230,7 +230,7 @@ function renderPagination(totalItems) {
     // Tombol Previous
     paginationContainer.innerHTML += `
         <li class="${currentPage === 1 ? 'disabled' : ''}">
-            <a href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-long-arrow-left"></i> Previous Page</a>
+            <a href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-long-arrow-left"></i> <span class="page-text">Previous Page</span></a>
         </li>
     `;
 
@@ -246,7 +246,7 @@ function renderPagination(totalItems) {
     // Tombol Next
     paginationContainer.innerHTML += `
         <li class="${currentPage === totalPages ? 'disabled' : ''}">
-            <a href="#" onclick="changePage(${currentPage + 1})">Next Page <i class="fa fa-long-arrow-right"></i></a>
+            <a href="#" onclick="changePage(${currentPage + 1})"> <span class="page-text">Next Page</span>  <i class="fa fa-long-arrow-right"></i></a>
         </li>
     `;
 }

@@ -284,7 +284,7 @@
   .blog .blog-item .entry-meta{
     margin-bottom: 20px;
     margin-left: 15px;
-    width: 77vw;
+    width: 85vw;
   }
 
   .blog .blog-item .blog-content h3 {
@@ -315,6 +315,15 @@
     margin-left: 18px;
     max-width: 80vw;
   }
+  .page-text {
+    display: none;
+    text-align: center;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  width: 110%;
+}
 
 }
 
