@@ -1471,6 +1471,15 @@ textarea#message{
   margin-bottom: 60px;
   padding-left: 0;
 }
+.categories{
+  margin-bottom: 0px !important;
+}
+.searching{
+  margin-bottom: 0px !important;
+}
+.sub-title-news{
+  padding-bottom:0px !important;
+}
 
 .single_comments {
   margin-bottom: 20px;
