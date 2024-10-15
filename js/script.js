@@ -173,7 +173,47 @@ const news = [
         editor:"Instagram",
         category:"Instagram", 
         date:"4 MEI 2024",
-    },  
+    },
+    {
+        title:"Rasyid", 
+        desc:"Testimoni kesen2 mengikuti ujian PKPA UPA + Brevet Pajak di Peradi Nusantata.",
+        src:"https://www.instagram.com/reel/C_4Wx84Sd30/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"14 SPT 2024",
+    }, 
+    {
+        title:"Asri Koko", 
+        desc:"Testimoni mengikuti program pendidikan yang diadakan @peradinusantara.id",
+        src:"https://www.instagram.com/reel/C_2JYelSOCU/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"13 SPT 2024",
+    },
+    {
+        title:"Hanggoro Bayu", 
+        desc:"Testimoni mengikuti kelas dan ujian pendidikan advokat angkatan 10 di Peradi Nusantata.",
+        src:"https://www.instagram.com/reel/C_0Tg0WSzMz/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"12 SPT 2024",
+    },
+    {
+        title:"Zikril", 
+        desc:"Testimoni mengikuti kelas dan ujian PKPA + UPA angkatan 9 di Peradi Nusantata.",
+        src:"https://www.instagram.com/reel/C_Q09P9S79D/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"30 AGS 2024",
+    },
+    {
+        title:"Relinda Putri", 
+        desc:"Testimoni peserta PKPA dan UPA angkatan 9 PERADI NUSANTARA.",
+        src:"https://www.instagram.com/reel/C9y7rxpy1VU/?utm_source=ig_embed&amp;utm_campaign=loading", 
+        editor:"Instagram",
+        category:"Instagram", 
+        date:"24 JUL 2024",
+    },      
 ]
 
 // Inisialisasi variabel global untuk pagination
