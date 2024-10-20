@@ -8245,3 +8245,27 @@ button.close {
       grid-template-columns: 1fr;
     }
   }
+
+  .active-category {
+    background-color: yellow !important; /* Warna aktif */
+    color: black !important ;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.blog_category li a {
+    background-color: #f1f1f1; /* Warna default */
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.blog_category li a:hover {
+    background-color: #ddd; /* Warna hover */
+}
