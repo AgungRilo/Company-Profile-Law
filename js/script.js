@@ -143,6 +143,14 @@ document.getElementById('searchInput').addEventListener('input', function () {
 
 const news = [
     {
+        title:"Sosialisasi Ketum DPP Peradi Nusantara Menjelang Pelantikan Advokat", 
+        desc:"Bali Kuta Utara(MATA)-Minggu 20 Oktober 2024 Canggu Bali, setelah nobar pelantikan RI.1 & RI.2 Mr Ronald Ketua Umum DPP Peradi Nusantara mengajak para calon advokat didikannya untuk menjadi advokat yang profesional dan berintegritas, upaya tersebut disampaikan dalam sambutannya sebagai referensi menjadi seorang advokat berdedikasi tinggi menolong masyarakat yang membutuhkan bantuan hukum dengan setulus hati.",
+        src:"https://mediaadipatinusantara.online/P/2024/10/20/sosialisasi-ketum-dpp-peradi-nusantara-menjelang-pelantikan-advokat/", 
+        editor:"Media Adipati",
+        category:"Web", 
+        date:"20 OKT 2024",
+    },  
+    {
         title:"Peradi Nusantara Mengadakan PKΡΑ UPA dan Brevet AB Angkatan ke-9 dengan Menghadirkan Eks Wakapolri", 
         desc:"Jejakinformasi.id. Jakarta Peradi Nusantara mengadakan Pendidikan Khusus Profesi Advokat. Ujian Profesi Advokat dan Brevet AB (Profesi Kuasa Hukum Pajak) yang sebelumnya pada Hari Pertama untuk sesi pembukaan pada pukul 16:00-18:00 Wib yang disampaikan oleh Ketua Umum Peradi Nusantara Ronald Samuel Wuisan.",
         src:"https://www.jejakinformasi.id/2024/07/peradi-nusantara-mengadakan-pkpa-upa.html", 
