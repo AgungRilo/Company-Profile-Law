@@ -143,6 +143,14 @@ document.getElementById('searchInput').addEventListener('input', function () {
 
 const news = [
     {
+        title:"Sebanyak 40 Orang Advokat Dilantik oleh Pengadilan Tinggi Bali", 
+        desc:"Denpasar Bali, – MATA Menjadi advokat profesional dan berintegritas DPD Peradi Nusantara ( Persaudaraan Advokatindo Nusantara ) BALI di bawah kepemimpinan Ronald Samuel Wuisan, SH., SE., MH., MM yang berlangsung di Pengadilan Tinggi Bali Denpasar , Senin (21/10/24).",
+        src:"https://mediaadipatinusantara.online/P/2024/10/21/sebanyak-40-orang-advokat-dilantik-oleh-pengadilan-tinggi-bali/", 
+        editor:"Media Adipati",
+        category:"Web", 
+        date:"21 OKT 2024",
+    },
+    {
         title:"Sosialisasi Ketum DPP Peradi Nusantara Menjelang Pelantikan Advokat", 
         desc:"Bali Kuta Utara(MATA)-Minggu 20 Oktober 2024 Canggu Bali, setelah nobar pelantikan RI.1 & RI.2 Mr Ronald Ketua Umum DPP Peradi Nusantara mengajak para calon advokat didikannya untuk menjadi advokat yang profesional dan berintegritas, upaya tersebut disampaikan dalam sambutannya sebagai referensi menjadi seorang advokat berdedikasi tinggi menolong masyarakat yang membutuhkan bantuan hukum dengan setulus hati.",
         src:"https://mediaadipatinusantara.online/P/2024/10/20/sosialisasi-ketum-dpp-peradi-nusantara-menjelang-pelantikan-advokat/", 
