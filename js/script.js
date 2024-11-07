@@ -101,7 +101,7 @@ menuItems.forEach(item => {
 // });
 
 function jsonToText(json) {
-    return `Hai, Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
+    return `Halo! Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
         `Nama: ${json.name}\n` +
         `Email: ${json.email}\n` +
         `Universitas: ${json.university}\n` +
