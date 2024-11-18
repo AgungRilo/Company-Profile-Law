@@ -393,22 +393,11 @@ window.onload = function () {
 
 
 function toggleWhatsappList() {
-    var currentDate = new Date();
-    var cutoffDate = new Date('2024-10-11');
+    var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+    const jasa = "Halo! Saya ingin bertanya tentang Peradi Nusantara"
 
-    // Cek apakah tanggal saat ini sudah melewati 11 Oktober 2024
-    if (currentDate >= cutoffDate) {
-        // Jika sudah melewati, buka tab baru dengan link yang diberikan
-        window.open('https://app.peradinusantara.org/cs', '_blank');
-    } else {
-        // Jika belum, toggle tampilan daftar nomor WhatsApp
-        var whatsappList = document.getElementById('whatsappList');
-        if (whatsappList.style.display === 'block') {
-            whatsappList.style.display = 'none';
-        } else {
-            whatsappList.style.display = 'block';
-        }
-    }
+    const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
+    window.open(textMenu, '_blank'); 
 }
 
 
