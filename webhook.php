@@ -74,12 +74,12 @@ if (is_array($data)) {
         // send notification and insert into DB if 'pesan' contains "Halo" or "halo"
 
         if (
-            strpos($pesan, 'Halo') !== false ||
-            strpos($pesan, 'halo') !== false ||
-            strpos($pesan, 'Halo!') !== false ||
-            strpos($pesan, 'Halo,') !== false ||
-            strpos($pesan, 'halo,') !== false ||
-            strpos($pesan, 'halo!') !== false
+            strpos($pesan, 'Halo') !== false || strpos($pesan, 'halo') !== false ||
+            strpos($pesan, 'Halo!') !== false || strpos($pesan, 'halo!') !== false ||
+            strpos($pesan, 'Halo,') !== false || strpos($pesan, 'halo,') !== false ||
+            strpos($pesan, 'hallo,') !== false || strpos($pesan, 'Hallo,') !== false ||
+            strpos($pesan, 'hello,') !== false || strpos($pesan, 'Hello,') !== false ||
+            strpos($pesan, 'admin,') !== false || strpos($pesan, 'Admin,') !== false
         ) {
             // Prepare SQL query to prevent SQL injection
             $query = "INSERT INTO chat_whatsapp 
