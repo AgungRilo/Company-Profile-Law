@@ -101,7 +101,7 @@ menuItems.forEach(item => {
 // });
 
 function jsonToText(json) {
-    return `Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
+    return `Halo! Saya ingin mendaftar ke kelas berikut biodata saya:\n\n` +
         `Nama: ${json.name}\n` +
         `Email: ${json.email}\n` +
         `Universitas: ${json.university}\n` +
@@ -142,6 +142,14 @@ document.getElementById('searchInput').addEventListener('input', function () {
 });
 
 const news = [
+    {
+        title:"Sebanyak 40 Orang Advokat Dilantik oleh Pengadilan Tinggi Bali", 
+        desc:"Denpasar Bali, – MATA Menjadi advokat profesional dan berintegritas DPD Peradi Nusantara ( Persaudaraan Advokatindo Nusantara ) BALI di bawah kepemimpinan Ronald Samuel Wuisan, SH., SE., MH., MM yang berlangsung di Pengadilan Tinggi Bali Denpasar , Senin (21/10/24).",
+        src:"https://mediaadipatinusantara.online/P/2024/10/21/sebanyak-40-orang-advokat-dilantik-oleh-pengadilan-tinggi-bali/", 
+        editor:"Media Adipati",
+        category:"Web", 
+        date:"21 OKT 2024",
+    },
     {
         title:"Sosialisasi Ketum DPP Peradi Nusantara Menjelang Pelantikan Advokat", 
         desc:"Bali Kuta Utara(MATA)-Minggu 20 Oktober 2024 Canggu Bali, setelah nobar pelantikan RI.1 & RI.2 Mr Ronald Ketua Umum DPP Peradi Nusantara mengajak para calon advokat didikannya untuk menjadi advokat yang profesional dan berintegritas, upaya tersebut disampaikan dalam sambutannya sebagai referensi menjadi seorang advokat berdedikasi tinggi menolong masyarakat yang membutuhkan bantuan hukum dengan setulus hati.",
@@ -385,22 +393,11 @@ window.onload = function () {
 
 
 function toggleWhatsappList() {
-    var currentDate = new Date();
-    var cutoffDate = new Date('2024-10-11');
+    var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+    const jasa = "Halo! Saya ingin bertanya tentang Peradi Nusantara"
 
-    // Cek apakah tanggal saat ini sudah melewati 11 Oktober 2024
-    if (currentDate >= cutoffDate) {
-        // Jika sudah melewati, buka tab baru dengan link yang diberikan
-        window.open('https://app.peradinusantara.org/cs', '_blank');
-    } else {
-        // Jika belum, toggle tampilan daftar nomor WhatsApp
-        var whatsappList = document.getElementById('whatsappList');
-        if (whatsappList.style.display === 'block') {
-            whatsappList.style.display = 'none';
-        } else {
-            whatsappList.style.display = 'block';
-        }
-    }
+    const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
+    window.open(textMenu, '_blank'); 
 }
 
 
