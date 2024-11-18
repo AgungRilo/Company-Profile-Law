@@ -93,6 +93,9 @@ if (is_array($data)) {
                 // Execute the prepared statement
                 if (mysqli_stmt_execute($stmt)) {
                     echo "Data inserted successfully!";
+
+                    // Call process_call_wa if a greeting message is detected
+                    process_call_wa($conn, $sender, $name);
                 } else {
                     // Log the error if execution fails
                     error_log("Query execution failed: " . mysqli_stmt_error($stmt));
@@ -106,9 +109,6 @@ if (is_array($data)) {
                 error_log("Query preparation failed: " . mysqli_error($conn));
                 echo "Error preparing query.";
             }
-
-            // Call process_call_wa if a greeting message is detected
-            process_call_wa($conn, $sender, $name);
         }
     } else {
         echo "Not enough data provided.";
