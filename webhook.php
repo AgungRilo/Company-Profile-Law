@@ -77,6 +77,8 @@ if (is_array($data)) {
             strpos($pesan, 'Halo') !== false ||
             strpos($pesan, 'halo') !== false ||
             strpos($pesan, 'Halo!') !== false ||
+            strpos($pesan, 'Halo,') !== false ||
+            strpos($pesan, 'halo,') !== false ||
             strpos($pesan, 'halo!') !== false
         ) {
             // Prepare SQL query to prevent SQL injection
