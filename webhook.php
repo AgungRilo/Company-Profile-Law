@@ -76,7 +76,7 @@ if (is_array($data)) {
         if (
             strpos($pesan, 'Halo') !== false || strpos($pesan, 'halo') !== false ||
             strpos($pesan, 'Halo!') !== false || strpos($pesan, 'halo!') !== false ||
-            // strpos($pesan, 'Halo,') !== false || strpos($pesan, 'halo,') !== false ||
+            strpos($pesan, 'Halo,') !== false || strpos($pesan, 'halo,') !== false ||
             strpos($pesan, 'hallo,') !== false || strpos($pesan, 'Hallo,') !== false ||
             strpos($pesan, 'hello,') !== false || strpos($pesan, 'Hello,') !== false ||
             strpos($pesan, 'admin,') !== false || strpos($pesan, 'Admin,') !== false
