@@ -26,7 +26,7 @@ if (is_array($data)) {
     $propertyCount = count($data);
     error_log("Property count: $propertyCount");
     $recordWa = getParameterValue($conn, '@recordChatWaOfficial');
-    $countPengirim = count($data['pengirim']);
+    $countPengirim = strlen($data['pengirim']);
     // Make sure data has enough properties and check if recording is enabled
     if ($propertyCount > 15 && $recordWa == 'Y' && $countPengirim < 17) {
         // Parse the JSON data with additional checks for missing fields
