@@ -116,7 +116,7 @@ function save_data_to_temp_table_wa($conn, $data)
     $name = isset($data['name']) ? $data['name'] : '';
     $type = isset($data['type']) ? $data['type'] : '';
     // Prepare SQL query to prevent SQL injection
-    $query = "INSERT INTO chat_whatsapp 
+    $query = "INSERT INTO chat_whatsapp_temp 
     (quick, device, pesan, pengirim, member, message, text, sender, name, type) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
