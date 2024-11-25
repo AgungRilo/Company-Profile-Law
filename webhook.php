@@ -30,6 +30,7 @@ if (is_array($data)) {
     error_log("Property count: $propertyCount");
     $recordWa = getParameterValue($conn, '@recordChatWaOfficial');
     $countPengirim = strlen($data['pengirim']);
+    $countsender = strlen($data['sender']);
     // Make sure data has enough properties and check if recording is enabled
     if ($propertyCount > 15 && $recordWa == 'Y' && $countPengirim < 17) {
         // Parse the JSON data with additional checks for missing fields
@@ -73,7 +74,7 @@ if (is_array($data)) {
                     echo "Data inserted successfully!";
 
                     // Call process_call_wa if a greeting message is detected
-                    if ($countPengirim < 17) {
+                    if ($countPengirim < 17 && $countsender) {
                         process_call_wa($conn, $sender, $name);
                     }
                 } else {
