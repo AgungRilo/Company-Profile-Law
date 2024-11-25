@@ -234,7 +234,7 @@ function process_call_wa($conn, $handphone, $namalengkap)
         $linkGroupWaSosilisasi = getParameterValue($conn, '@linkGroupWaSosilisasi');
         if (!empty($gettoken) && $notifSend == 'Y') {
             //send group chat
-            $dataSend = "Halo, Saya " . $user['nama_lengkap'] . " 
+            $dataSend = "System-Halo, Saya " . $user['nama_lengkap'] . " 
 Wasekjend Peradi Nusantara.
 
 Silahkan Gabung Group Sosialisasi kami karena disana kami akan membahas :
