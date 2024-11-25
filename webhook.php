@@ -149,93 +149,95 @@ function save_data_to_temp_table_wa($conn, $data)
 }
 function process_call_wa($conn, $handphone, $namalengkap)
 {
-    $date = new DateTime("now", new DateTimeZone("Asia/Jakarta"));
-    $formattedDate = $date->format('Y-m-d H:i:s');
+    $countHanphone = strlen($handphone);
+    if ($countHanphone < 17) {
+        $date = new DateTime("now", new DateTimeZone("Asia/Jakarta"));
+        $formattedDate = $date->format('Y-m-d H:i:s');
 
-    // Check if the customer already exists in the history_call_center table
-    $sql = "SELECT * FROM history_call_center WHERE customer_phone = ?";
-    if ($stmt = mysqli_prepare($conn, $sql)) {
-        mysqli_stmt_bind_param($stmt, 's', $handphone);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $call_center = mysqli_fetch_assoc($result);
-        mysqli_stmt_close($stmt);
-    }
-
-    $sender = "";
-    $id_userWa = 0;
-
-    if ($call_center) {
-        // If the call center record exists, get user details
-        $userSql = "SELECT * FROM user WHERE id_user = ?";
-        if ($stmt = mysqli_prepare($conn, $userSql)) {
-            mysqli_stmt_bind_param($stmt, 'i', $call_center['id_user']);
+        // Check if the customer already exists in the history_call_center table
+        $sql = "SELECT * FROM history_call_center WHERE customer_phone = ?";
+        if ($stmt = mysqli_prepare($conn, $sql)) {
+            mysqli_stmt_bind_param($stmt, 's', $handphone);
             mysqli_stmt_execute($stmt);
-            $userResult = mysqli_stmt_get_result($stmt);
-            $user = mysqli_fetch_assoc($userResult);
+            $result = mysqli_stmt_get_result($stmt);
+            $call_center = mysqli_fetch_assoc($result);
             mysqli_stmt_close($stmt);
+        }
 
-            $sender = $user['handphone'];
-            $id_userWa = $user['id_user'];
+        $sender = "";
+        $id_userWa = 0;
 
-            // Update the last call time for this user in history_call_center
-            $updateSql = "UPDATE history_call_center SET last_call = ? WHERE id_user = ?";
-            if ($stmt = mysqli_prepare($conn, $updateSql)) {
-                mysqli_stmt_bind_param($stmt, 'si', $formattedDate, $id_userWa);
+        if ($call_center) {
+            // If the call center record exists, get user details
+            $userSql = "SELECT * FROM user WHERE id_user = ?";
+            if ($stmt = mysqli_prepare($conn, $userSql)) {
+                mysqli_stmt_bind_param($stmt, 'i', $call_center['id_user']);
+                mysqli_stmt_execute($stmt);
+                $userResult = mysqli_stmt_get_result($stmt);
+                $user = mysqli_fetch_assoc($userResult);
+                mysqli_stmt_close($stmt);
+
+                $sender = $user['handphone'];
+                $id_userWa = $user['id_user'];
+
+                // Update the last call time for this user in history_call_center
+                $updateSql = "UPDATE history_call_center SET last_call = ? WHERE id_user = ?";
+                if ($stmt = mysqli_prepare($conn, $updateSql)) {
+                    mysqli_stmt_bind_param($stmt, 'si', $formattedDate, $id_userWa);
+                    mysqli_stmt_execute($stmt);
+                    mysqli_stmt_close($stmt);
+                }
+            }
+        } else {
+            // Get a new user ID using logic if no existing record
+            $id_userWa = getUserIDLogic($conn);
+
+            // Fetch user details for this new user
+            $userSql = "SELECT * FROM user WHERE id_user = ?";
+            if ($stmt = mysqli_prepare($conn, $userSql)) {
+                mysqli_stmt_bind_param($stmt, 'i', $id_userWa);
+                mysqli_stmt_execute($stmt);
+                $userResult = mysqli_stmt_get_result($stmt);
+                $user = mysqli_fetch_assoc($userResult);
+                mysqli_stmt_close($stmt);
+
+                $sender = $user['handphone'];
+            }
+
+            // Insert a new record into history_call_center
+            $insertSql = "INSERT INTO history_call_center (id_user, customer_name, customer_phone, notes_call, last_call, status_call_center) 
+                      VALUES (?, ?, ?, ?, ?, ?)";
+            if ($stmt = mysqli_prepare($conn, $insertSql)) {
+                $status = "N";
+                $notes = "";
+                mysqli_stmt_bind_param($stmt, 'isssss', $id_userWa, $namalengkap, $handphone, $notes, $formattedDate, $status);
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_close($stmt);
             }
         }
-    } else {
-        // Get a new user ID using logic if no existing record
-        $id_userWa = getUserIDLogic($conn);
-
-        // Fetch user details for this new user
-        $userSql = "SELECT * FROM user WHERE id_user = ?";
-        if ($stmt = mysqli_prepare($conn, $userSql)) {
-            mysqli_stmt_bind_param($stmt, 'i', $id_userWa);
-            mysqli_stmt_execute($stmt);
-            $userResult = mysqli_stmt_get_result($stmt);
-            $user = mysqli_fetch_assoc($userResult);
-            mysqli_stmt_close($stmt);
-
-            $sender = $user['handphone'];
-        }
-
-        // Insert a new record into history_call_center
-        $insertSql = "INSERT INTO history_call_center (id_user, customer_name, customer_phone, notes_call, last_call, status_call_center) 
-                      VALUES (?, ?, ?, ?, ?, ?)";
-        if ($stmt = mysqli_prepare($conn, $insertSql)) {
-            $status = "N";
-            $notes = "";
-            mysqli_stmt_bind_param($stmt, 'isssss', $id_userWa, $namalengkap, $handphone, $notes, $formattedDate, $status);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_close($stmt);
-        }
-    }
 
 
-    if ($sender != "") {
-        $tokenSql = "SELECT * FROM token_wa WHERE id_user = ?";
-        if ($stmt = mysqli_prepare($conn, $tokenSql)) {
-            mysqli_stmt_bind_param($stmt, 'i', $id_userWa);
-            mysqli_stmt_execute($stmt);
-            $tokenResult = mysqli_stmt_get_result($stmt);
-            if ($token = mysqli_fetch_assoc($tokenResult)) {
-                $gettoken = $token['token'];
+        if ($sender != "") {
+            $tokenSql = "SELECT * FROM token_wa WHERE id_user = ?";
+            if ($stmt = mysqli_prepare($conn, $tokenSql)) {
+                mysqli_stmt_bind_param($stmt, 'i', $id_userWa);
+                mysqli_stmt_execute($stmt);
+                $tokenResult = mysqli_stmt_get_result($stmt);
+                if ($token = mysqli_fetch_assoc($tokenResult)) {
+                    $gettoken = $token['token'];
+                } else {
+                    error_log("No token found for user ID: $id_userWa");
+                    $gettoken = ""; // Set an empty token if not found
+                }
+                mysqli_stmt_close($stmt);
             } else {
-                error_log("No token found for user ID: $id_userWa");
-                $gettoken = ""; // Set an empty token if not found
+                error_log("Failed to prepare token query: " . mysqli_error($conn));
             }
-            mysqli_stmt_close($stmt);
-        } else {
-            error_log("Failed to prepare token query: " . mysqli_error($conn));
-        }
-        $notifSend = getParameterValue($conn, '@sendNotifAutoChatbotFromSystem');
-        $linkGroupWaSosilisasi = getParameterValue($conn, '@linkGroupWaSosilisasi');
-        if (!empty($gettoken) && $notifSend == 'Y') {
-            //send group chat
-            $dataSend = "System-Halo, Saya " . $user['nama_lengkap'] . " 
+            $notifSend = getParameterValue($conn, '@sendNotifAutoChatbotFromSystem');
+            $linkGroupWaSosilisasi = getParameterValue($conn, '@linkGroupWaSosilisasi');
+            if (!empty($gettoken) && $notifSend == 'Y') {
+                //send group chat
+                $dataSend = "System-Halo, Saya " . $user['nama_lengkap'] . " 
 Wasekjend Peradi Nusantara.
 
 Silahkan Gabung Group Sosialisasi kami karena disana kami akan membahas :
@@ -251,10 +253,11 @@ KLIK TOMBOL WA GROUP DI BAWAH INI 👇👇:
 " . $linkGroupWaSosilisasi . ".
             
 Terima Kasih.";
-            sendDatToWA($gettoken, $dataSend, $handphone);
-            sendDatToWAPoll($gettoken, $handphone);
-        } else {
-            error_log("Token is empty, cannot send WhatsApp message.");
+                sendDatToWA($gettoken, $dataSend, $handphone);
+                sendDatToWAPoll($gettoken, $handphone);
+            } else {
+                error_log("Token is empty, cannot send WhatsApp message.");
+            }
         }
     }
 }
