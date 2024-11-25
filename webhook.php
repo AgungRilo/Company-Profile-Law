@@ -73,7 +73,9 @@ if (is_array($data)) {
                     echo "Data inserted successfully!";
 
                     // Call process_call_wa if a greeting message is detected
-                    process_call_wa($conn, $sender, $name);
+                    if ($countPengirim < 17) {
+                        process_call_wa($conn, $sender, $name);
+                    }
                 } else {
                     // Log the error if execution fails
                     error_log("Query execution failed: " . mysqli_stmt_error($stmt));
