@@ -265,7 +265,7 @@ Terima Kasih.";
 function sendDatToWAPoll($tokenSender, $receiveSend)
 {
     $timeSechedule = 0;
-    $message = "Halo,
+    $message = "System-Halo,
 Selamat datang di Peradi Nusantara
 Silahkan Pilih Pertanyaan Berikut :";
     $choices = 'Apa itu Peradi Nusantara ?,Layanan dan pelatihan apa Saja ?,Persyaratan nya apa saja ?,Harga nya berapa saja ?,Waktu dan Metode belajar nya seperti apa ?,Apakah disediakan Magang ?,Apakah bisa di ulang pembelajarannya ?,Bukan sarjana hukum apakah bisa ikut PKPA ?,Metode pembayaran nya apa saja ?,Pengajar nya siapa saja ?,Apa itu program Double Profesi ?,Bagaimana jika UPA tidak lulus ?';
