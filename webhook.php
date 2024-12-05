@@ -49,10 +49,10 @@ if (is_array($data)) {
         $pesan = substr($pesan, 0, 10);
 
 
-        // send notification and insert into DB if 'pesan' contains "Halo" or "halo"
+        // send notification and insert into DB if 'pesan' contains "Helow" or "helow"
 
         if (
-            strpos($pesan, 'Halo') !== false || strpos($pesan, 'halo') !== false ||
+            strpos($pesan, 'Helow') !== false || strpos($pesan, 'helow') !== false ||
             strpos($pesan, 'Halo!') !== false || strpos($pesan, 'halo!') !== false ||
             strpos($pesan, 'Halo,') !== false || strpos($pesan, 'halo,') !== false ||
             strpos($pesan, 'hallo,') !== false || strpos($pesan, 'Hallo,') !== false ||
