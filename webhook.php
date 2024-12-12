@@ -50,7 +50,12 @@ if (is_array($data)) {
 
 
         // send notification and insert into DB if 'pesan' contains "Helow" or "helow"
-
+        if (str_contains($message, 'Helow')) {
+            echo "Helow is true";
+        } else {
+            echo "Helow is false";
+        }
+        
         if (
             strpos($pesan, 'Helow') !== false || strpos($pesan, 'helow') !== false ||
             strpos($pesan, 'Halo!') !== false || strpos($pesan, 'halo!') !== false ||
