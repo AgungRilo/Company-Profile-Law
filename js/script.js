@@ -30,7 +30,7 @@ window.onload = resizeImage;
 window.onresize = resizeImage;
 
 //menu navbar
-var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+var phoneNumbers = "6281316206746"; // Ganti dengan nomor tujuan yang sesuai
 
 const jasa = "Saya ingin bertanya tentang jasa pembuatan Law Firm"
 const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
