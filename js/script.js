@@ -394,7 +394,7 @@ window.onload = function () {
 
 function toggleWhatsappList() {
     var phoneNumbers = "6281316206746"; // Ganti dengan nomor tujuan yang sesuai
-    const jasa = "Halo! Saya ingin bertanya tentang Peradi Nusantara"
+    const jasa = "Helow Admin, Saya ingin bertanya tentang Peradi Nusantara"
 
     const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
     window.open(textMenu, '_blank'); 
