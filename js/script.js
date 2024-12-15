@@ -111,7 +111,7 @@ function jsonToText(json) {
 // Contact form
 var form = $('#main-contact-form');
 
-var phoneNumber = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+var phoneNumber = "6281316206746"; // Ganti dengan nomor tujuan yang sesuai
 
 form.submit(function (event) {
     let data = {
@@ -393,7 +393,7 @@ window.onload = function () {
 
 
 function toggleWhatsappList() {
-    var phoneNumbers = "628811809844"; // Ganti dengan nomor tujuan yang sesuai
+    var phoneNumbers = "6281316206746"; // Ganti dengan nomor tujuan yang sesuai
     const jasa = "Halo! Saya ingin bertanya tentang Peradi Nusantara"
 
     const textMenu = `https://api.whatsapp.com/send?phone=${phoneNumbers}&text=${encodeURIComponent(jasa)}`
